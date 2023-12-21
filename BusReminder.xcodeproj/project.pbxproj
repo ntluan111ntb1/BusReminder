@@ -1,0 +1,685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0806F4D72B348AC0009E57AB /* BusReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F4D62B348AC0009E57AB /* BusReminderApp.swift */; };
+		0806F4DB2B348AC1009E57AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0806F4DA2B348AC1009E57AB /* Assets.xcassets */; };
+		0806F4DE2B348AC1009E57AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0806F4DD2B348AC1009E57AB /* Preview Assets.xcassets */; };
+		0806F5102B348ADB009E57AB /* EmptyInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F4E72B348ADB009E57AB /* EmptyInput.swift */; };
+		0806F5112B348ADB009E57AB /* BusStopLocationsHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F4E82B348ADB009E57AB /* BusStopLocationsHttp.swift */; };
+		0806F5122B348ADB009E57AB /* BusStopLocationsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F4EA2B348ADB009E57AB /* BusStopLocationsMapper.swift */; };
+		0806F5132B348ADB009E57AB /* BusStopLocationsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F4ED2B348ADB009E57AB /* BusStopLocationsEntity.swift */; };
+		0806F5142B348ADB009E57AB /* BusStopLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F4EF2B348ADB009E57AB /* BusStopLocations.swift */; };
+		0806F5172B348ADB009E57AB /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F4F72B348ADB009E57AB /* LocationViewModel.swift */; };
+		0806F5182B348ADB009E57AB /* BusStopLocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F4F92B348ADB009E57AB /* BusStopLocationsViewModel.swift */; };
+		0806F5192B348ADB009E57AB /* ListBusStopsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F4FE2B348ADB009E57AB /* ListBusStopsView.swift */; };
+		0806F51A2B348ADB009E57AB /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F5002B348ADB009E57AB /* MapView.swift */; };
+		0806F51B2B348ADB009E57AB /* BusStopLocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F5012B348ADB009E57AB /* BusStopLocationsView.swift */; };
+		0806F51C2B348ADB009E57AB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F5042B348ADB009E57AB /* Coordinator.swift */; };
+		0806F51D2B348ADB009E57AB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F5052B348ADB009E57AB /* SearchView.swift */; };
+		0806F51E2B348ADB009E57AB /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F5072B348ADB009E57AB /* SplashView.swift */; };
+		0806F51F2B348ADB009E57AB /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F5092B348ADB009E57AB /* LottieView.swift */; };
+		0806F5202B348ADB009E57AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F50B2B348ADB009E57AB /* Constants.swift */; };
+		0806F5212B348ADB009E57AB /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F50C2B348ADB009E57AB /* NetworkError.swift */; };
+		0806F5222B348ADB009E57AB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F50E2B348ADB009E57AB /* NetworkService.swift */; };
+		0806F5232B348ADB009E57AB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F50F2B348ADB009E57AB /* LocationManager.swift */; };
+		D5A7A5A73A3A9D319F2702D0 /* Pods_BusReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AE04F776B6C59CCA0565AA /* Pods_BusReminder.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0806F4D32B348AC0009E57AB /* BusReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0806F4D62B348AC0009E57AB /* BusReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusReminderApp.swift; sourceTree = "<group>"; };
+		0806F4DA2B348AC1009E57AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0806F4DD2B348AC1009E57AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0806F4E72B348ADB009E57AB /* EmptyInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyInput.swift; sourceTree = "<group>"; };
+		0806F4E82B348ADB009E57AB /* BusStopLocationsHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopLocationsHttp.swift; sourceTree = "<group>"; };
+		0806F4EA2B348ADB009E57AB /* BusStopLocationsMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopLocationsMapper.swift; sourceTree = "<group>"; };
+		0806F4ED2B348ADB009E57AB /* BusStopLocationsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopLocationsEntity.swift; sourceTree = "<group>"; };
+		0806F4EF2B348ADB009E57AB /* BusStopLocations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopLocations.swift; sourceTree = "<group>"; };
+		0806F4F72B348ADB009E57AB /* LocationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		0806F4F92B348ADB009E57AB /* BusStopLocationsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopLocationsViewModel.swift; sourceTree = "<group>"; };
+		0806F4FE2B348ADB009E57AB /* ListBusStopsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBusStopsView.swift; sourceTree = "<group>"; };
+		0806F5002B348ADB009E57AB /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		0806F5012B348ADB009E57AB /* BusStopLocationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopLocationsView.swift; sourceTree = "<group>"; };
+		0806F5042B348ADB009E57AB /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		0806F5052B348ADB009E57AB /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		0806F5072B348ADB009E57AB /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		0806F5092B348ADB009E57AB /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		0806F50B2B348ADB009E57AB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0806F50C2B348ADB009E57AB /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0806F50E2B348ADB009E57AB /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0806F50F2B348ADB009E57AB /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		14E6B561865EC1432D820912 /* Pods-BusReminder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusReminder.debug.xcconfig"; path = "Target Support Files/Pods-BusReminder/Pods-BusReminder.debug.xcconfig"; sourceTree = "<group>"; };
+		77AE04F776B6C59CCA0565AA /* Pods_BusReminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusReminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB62082411C8347D6423B4C8 /* Pods-BusReminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusReminder.release.xcconfig"; path = "Target Support Files/Pods-BusReminder/Pods-BusReminder.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0806F4D02B348AC0009E57AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5A7A5A73A3A9D319F2702D0 /* Pods_BusReminder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0806F4CA2B348AC0009E57AB = {
+			isa = PBXGroup;
+			children = (
+				0806F4D52B348AC0009E57AB /* BusReminder */,
+				0806F4D42B348AC0009E57AB /* Products */,
+				5ED12B8F7907002CD908140D /* Pods */,
+				F1FBC6CCE9862E4F33253AE0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0806F4D42B348AC0009E57AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4D32B348AC0009E57AB /* BusReminder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0806F4D52B348AC0009E57AB /* BusReminder */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4E42B348ADB009E57AB /* DataInfrastructor */,
+				0806F4EE2B348ADB009E57AB /* Domain */,
+				0806F50D2B348ADB009E57AB /* Manager */,
+				0806F4F42B348ADB009E57AB /* Presentation */,
+				0806F50A2B348ADB009E57AB /* Utils */,
+				0806F4D62B348AC0009E57AB /* BusReminderApp.swift */,
+				0806F4DA2B348AC1009E57AB /* Assets.xcassets */,
+				0806F4DC2B348AC1009E57AB /* Preview Content */,
+			);
+			path = BusReminder;
+			sourceTree = "<group>";
+		};
+		0806F4DC2B348AC1009E57AB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4DD2B348AC1009E57AB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0806F4E42B348ADB009E57AB /* DataInfrastructor */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4E52B348ADB009E57AB /* Connection */,
+				0806F4E92B348ADB009E57AB /* Mapper */,
+				0806F4EB2B348ADB009E57AB /* Entities */,
+			);
+			path = DataInfrastructor;
+			sourceTree = "<group>";
+		};
+		0806F4E52B348ADB009E57AB /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4E62B348ADB009E57AB /* Input */,
+				0806F4E82B348ADB009E57AB /* BusStopLocationsHttp.swift */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		0806F4E62B348ADB009E57AB /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4E72B348ADB009E57AB /* EmptyInput.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		0806F4E92B348ADB009E57AB /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4EA2B348ADB009E57AB /* BusStopLocationsMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		0806F4EB2B348ADB009E57AB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4EC2B348ADB009E57AB /* Common */,
+				0806F4ED2B348ADB009E57AB /* BusStopLocationsEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		0806F4EC2B348ADB009E57AB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0806F4EE2B348ADB009E57AB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4EF2B348ADB009E57AB /* BusStopLocations.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0806F4F42B348ADB009E57AB /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4F52B348ADB009E57AB /* ViewModel */,
+				0806F4FA2B348ADB009E57AB /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0806F4F52B348ADB009E57AB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4F62B348ADB009E57AB /* Location */,
+				0806F4F82B348ADB009E57AB /* BusStopLocations */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0806F4F62B348ADB009E57AB /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4F72B348ADB009E57AB /* LocationViewModel.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		0806F4F82B348ADB009E57AB /* BusStopLocations */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4F92B348ADB009E57AB /* BusStopLocationsViewModel.swift */,
+			);
+			path = BusStopLocations;
+			sourceTree = "<group>";
+		};
+		0806F4FA2B348ADB009E57AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4FB2B348ADB009E57AB /* ListBusTop */,
+				0806F5052B348ADB009E57AB /* SearchView.swift */,
+				0806F5062B348ADB009E57AB /* HomeView */,
+				0806F5072B348ADB009E57AB /* SplashView.swift */,
+				0806F5082B348ADB009E57AB /* LottieView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0806F4FB2B348ADB009E57AB /* ListBusTop */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4FC2B348ADB009E57AB /* Contents */,
+				0806F5012B348ADB009E57AB /* BusStopLocationsView.swift */,
+				0806F5022B348ADB009E57AB /* Inner */,
+			);
+			path = ListBusTop;
+			sourceTree = "<group>";
+		};
+		0806F4FC2B348ADB009E57AB /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4FD2B348ADB009E57AB /* ListBusStop */,
+				0806F4FF2B348ADB009E57AB /* MapView */,
+			);
+			path = Contents;
+			sourceTree = "<group>";
+		};
+		0806F4FD2B348ADB009E57AB /* ListBusStop */ = {
+			isa = PBXGroup;
+			children = (
+				0806F4FE2B348ADB009E57AB /* ListBusStopsView.swift */,
+			);
+			path = ListBusStop;
+			sourceTree = "<group>";
+		};
+		0806F4FF2B348ADB009E57AB /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				0806F5002B348ADB009E57AB /* MapView.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		0806F5022B348ADB009E57AB /* Inner */ = {
+			isa = PBXGroup;
+			children = (
+				0806F5032B348ADB009E57AB /* Coordinator */,
+			);
+			path = Inner;
+			sourceTree = "<group>";
+		};
+		0806F5032B348ADB009E57AB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0806F5042B348ADB009E57AB /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		0806F5062B348ADB009E57AB /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		0806F5082B348ADB009E57AB /* LottieView */ = {
+			isa = PBXGroup;
+			children = (
+				0806F5092B348ADB009E57AB /* LottieView.swift */,
+			);
+			path = LottieView;
+			sourceTree = "<group>";
+		};
+		0806F50A2B348ADB009E57AB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0806F50B2B348ADB009E57AB /* Constants.swift */,
+				0806F50C2B348ADB009E57AB /* NetworkError.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0806F50D2B348ADB009E57AB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0806F50E2B348ADB009E57AB /* NetworkService.swift */,
+				0806F50F2B348ADB009E57AB /* LocationManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		5ED12B8F7907002CD908140D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14E6B561865EC1432D820912 /* Pods-BusReminder.debug.xcconfig */,
+				BB62082411C8347D6423B4C8 /* Pods-BusReminder.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F1FBC6CCE9862E4F33253AE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77AE04F776B6C59CCA0565AA /* Pods_BusReminder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0806F4D22B348AC0009E57AB /* BusReminder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0806F4E12B348AC1009E57AB /* Build configuration list for PBXNativeTarget "BusReminder" */;
+			buildPhases = (
+				BC9844B2970985EDB44B4420 /* [CP] Check Pods Manifest.lock */,
+				0806F4CF2B348AC0009E57AB /* Sources */,
+				0806F4D02B348AC0009E57AB /* Frameworks */,
+				0806F4D12B348AC0009E57AB /* Resources */,
+				02C1ADA16924EBDD13C66C7F /* [CP] Embed Pods Frameworks */,
+				2F123ED661B53D2F74CB96A5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BusReminder;
+			productName = BusReminder;
+			productReference = 0806F4D32B348AC0009E57AB /* BusReminder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0806F4CB2B348AC0009E57AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					0806F4D22B348AC0009E57AB = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = 0806F4CE2B348AC0009E57AB /* Build configuration list for PBXProject "BusReminder" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0806F4CA2B348AC0009E57AB;
+			productRefGroup = 0806F4D42B348AC0009E57AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0806F4D22B348AC0009E57AB /* BusReminder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0806F4D12B348AC0009E57AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0806F4DE2B348AC1009E57AB /* Preview Assets.xcassets in Resources */,
+				0806F4DB2B348AC1009E57AB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02C1ADA16924EBDD13C66C7F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusReminder/Pods-BusReminder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusReminder/Pods-BusReminder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BusReminder/Pods-BusReminder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F123ED661B53D2F74CB96A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusReminder/Pods-BusReminder-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusReminder/Pods-BusReminder-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BusReminder/Pods-BusReminder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC9844B2970985EDB44B4420 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BusReminder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0806F4CF2B348AC0009E57AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0806F51B2B348ADB009E57AB /* BusStopLocationsView.swift in Sources */,
+				0806F5202B348ADB009E57AB /* Constants.swift in Sources */,
+				0806F5102B348ADB009E57AB /* EmptyInput.swift in Sources */,
+				0806F51E2B348ADB009E57AB /* SplashView.swift in Sources */,
+				0806F51C2B348ADB009E57AB /* Coordinator.swift in Sources */,
+				0806F5182B348ADB009E57AB /* BusStopLocationsViewModel.swift in Sources */,
+				0806F5112B348ADB009E57AB /* BusStopLocationsHttp.swift in Sources */,
+				0806F51A2B348ADB009E57AB /* MapView.swift in Sources */,
+				0806F51F2B348ADB009E57AB /* LottieView.swift in Sources */,
+				0806F5122B348ADB009E57AB /* BusStopLocationsMapper.swift in Sources */,
+				0806F5142B348ADB009E57AB /* BusStopLocations.swift in Sources */,
+				0806F5192B348ADB009E57AB /* ListBusStopsView.swift in Sources */,
+				0806F5232B348ADB009E57AB /* LocationManager.swift in Sources */,
+				0806F51D2B348ADB009E57AB /* SearchView.swift in Sources */,
+				0806F5132B348ADB009E57AB /* BusStopLocationsEntity.swift in Sources */,
+				0806F5222B348ADB009E57AB /* NetworkService.swift in Sources */,
+				0806F5212B348ADB009E57AB /* NetworkError.swift in Sources */,
+				0806F4D72B348AC0009E57AB /* BusReminderApp.swift in Sources */,
+				0806F5172B348ADB009E57AB /* LocationViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0806F4DF2B348AC1009E57AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0806F4E02B348AC1009E57AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0806F4E22B348AC1009E57AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E6B561865EC1432D820912 /* Pods-BusReminder.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BusReminder/Preview Content\"";
+				DEVELOPMENT_TEAM = 4Y54DH4C54;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BusRemider-Teams.BusReminder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0806F4E32B348AC1009E57AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB62082411C8347D6423B4C8 /* Pods-BusReminder.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BusReminder/Preview Content\"";
+				DEVELOPMENT_TEAM = 4Y54DH4C54;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BusRemider-Teams.BusReminder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0806F4CE2B348AC0009E57AB /* Build configuration list for PBXProject "BusReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0806F4DF2B348AC1009E57AB /* Debug */,
+				0806F4E02B348AC1009E57AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0806F4E12B348AC1009E57AB /* Build configuration list for PBXNativeTarget "BusReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0806F4E22B348AC1009E57AB /* Debug */,
+				0806F4E32B348AC1009E57AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0806F4CB2B348AC0009E57AB /* Project object */;
+}
