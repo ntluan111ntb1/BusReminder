@@ -13,7 +13,7 @@ extension Coordinator: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         // Đã nhấn vào marker, bạn có thể xử lý logic ở đây
-        isShowListBusStop = true
+        parent.isShowListBusStop = true
         let camera = GMSCameraPosition.camera(
             withLatitude: marker.position.latitude,
             longitude: marker.position.longitude,
@@ -27,10 +27,16 @@ extension Coordinator: GMSMapViewDelegate {
 class Coordinator: NSObject {
     let busStopLocations: BusStopLocations
     @Binding var isShowListBusStop: Bool // Use @Binding here
-
-    init(busStopLocations: BusStopLocations, isShowListBusStop: Binding<Bool>) {
+    var parent: MapView
+    
+    init(
+        busStopLocations: BusStopLocations,
+        isShowListBusStop: Binding<Bool>,
+        _ mapView: MapView
+    ) {
         self.busStopLocations = busStopLocations
-        self._isShowListBusStop = isShowListBusStop // Use the underscore to access the binding
+        self._isShowListBusStop = isShowListBusStop
+        self.parent = mapView
     }
 
     
