@@ -13,7 +13,7 @@ struct MapView: UIViewRepresentable {
 
     @EnvironmentObject var locationManager: LocationManager
     @Binding var busStopLocations: BusStopLocations
-
+    @Binding var isShowListBusStop: Bool
     /// Mark: Create Map View
     /// Add user location view
     func makeUIView(context: Context) -> GMSMapView {
@@ -27,11 +27,12 @@ struct MapView: UIViewRepresentable {
             mapView.camera = camera
             mapView.isMyLocationEnabled = true
         }
+        mapView.delegate = context.coordinator
         return mapView
     }
 
     func makeCoordinator() -> Coordinator {
-        return Coordinator(busStopLocations: busStopLocations)
+        return Coordinator(busStopLocations: busStopLocations, isShowListBusStop: $isShowListBusStop)
     }
 
     func updateUIView(_ uiView: GMSMapView, context: Context) {

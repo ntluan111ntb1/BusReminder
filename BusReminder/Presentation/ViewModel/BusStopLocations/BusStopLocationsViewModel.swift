@@ -11,7 +11,7 @@ import OSLog
 
 final class BusStopLocationsViewModel: ObservableObject {
     @Published var busStopLocations = BusStopLocations(results: [])
-    @Published var isLoadMore = true
+    @Published var isLoadMore = false
 
     private var disposables = Set<AnyCancellable>()
     private let logger = Logger()

@@ -94,11 +94,11 @@
 			children = (
 				0806F4E42B348ADB009E57AB /* DataInfrastructor */,
 				0806F4EE2B348ADB009E57AB /* Domain */,
-				0806F50D2B348ADB009E57AB /* Manager */,
 				0806F4F42B348ADB009E57AB /* Presentation */,
 				0806F50A2B348ADB009E57AB /* Utils */,
 				0806F4D62B348AC0009E57AB /* BusReminderApp.swift */,
 				0806F4DA2B348AC1009E57AB /* Assets.xcassets */,
+				0806F50D2B348ADB009E57AB /* Manager */,
 				0806F4DC2B348AC1009E57AB /* Preview Content */,
 			);
 			path = BusReminder;
@@ -209,10 +209,10 @@
 			isa = PBXGroup;
 			children = (
 				0806F4FB2B348ADB009E57AB /* ListBusTop */,
-				0806F5052B348ADB009E57AB /* SearchView.swift */,
-				0806F5062B348ADB009E57AB /* HomeView */,
-				0806F5072B348ADB009E57AB /* SplashView.swift */,
 				0806F5082B348ADB009E57AB /* LottieView */,
+				0806F5062B348ADB009E57AB /* HomeView */,
+				0806F5052B348ADB009E57AB /* SearchView.swift */,
+				0806F5072B348ADB009E57AB /* SplashView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,7 +222,6 @@
 			children = (
 				0806F4FC2B348ADB009E57AB /* Contents */,
 				0806F5012B348ADB009E57AB /* BusStopLocationsView.swift */,
-				0806F5022B348ADB009E57AB /* Inner */,
 			);
 			path = ListBusTop;
 			sourceTree = "<group>";
@@ -230,6 +229,7 @@
 		0806F4FC2B348ADB009E57AB /* Contents */ = {
 			isa = PBXGroup;
 			children = (
+				0806F5032B348ADB009E57AB /* Coordinator */,
 				0806F4FD2B348ADB009E57AB /* ListBusStop */,
 				0806F4FF2B348ADB009E57AB /* MapView */,
 			);
@@ -250,14 +250,6 @@
 				0806F5002B348ADB009E57AB /* MapView.swift */,
 			);
 			path = MapView;
-			sourceTree = "<group>";
-		};
-		0806F5022B348ADB009E57AB /* Inner */ = {
-			isa = PBXGroup;
-			children = (
-				0806F5032B348ADB009E57AB /* Coordinator */,
-			);
-			path = Inner;
 			sourceTree = "<group>";
 		};
 		0806F5032B348ADB009E57AB /* Coordinator */ = {

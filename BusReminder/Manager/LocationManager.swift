@@ -29,22 +29,9 @@ class LocationManager: NSObject, ObservableObject, MKMapViewDelegate, CLLocation
     override init() {
         super.init()
         manager.delegate = self
-        mapView.delegate = self
-
         //MARK: Requesting location Access
         manager.requestWhenInUseAuthorization()
 
-        //MARK: Search Textfield Watching
-        cancellable = $searchText
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
-            .removeDuplicates()
-            .sink(receiveValue: { value in
-                if value != "" {
-                    self.fetchPlaces(value: value)
-                } else {
-                    self.fetchedPlaces = nil
-                }
-            })
     }
 
     //MARK: Phương thức chính tìm kiếm Place dựa trên giá trị truyền vào ở đây là searchText

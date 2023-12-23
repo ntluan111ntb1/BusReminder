@@ -7,13 +7,32 @@
 
 import Foundation
 import GoogleMaps
+import SwiftUI
+
+extension Coordinator: GMSMapViewDelegate {
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        // Đã nhấn vào marker, bạn có thể xử lý logic ở đây
+        isShowListBusStop = true
+        let camera = GMSCameraPosition.camera(
+            withLatitude: marker.position.latitude,
+            longitude: marker.position.longitude,
+            zoom: 15
+        )
+        mapView.animate(to: camera)
+        return true
+    }
+}
 
 class Coordinator: NSObject {
     let busStopLocations: BusStopLocations
-    
-    init(busStopLocations: BusStopLocations) {
+    @Binding var isShowListBusStop: Bool // Use @Binding here
+
+    init(busStopLocations: BusStopLocations, isShowListBusStop: Binding<Bool>) {
         self.busStopLocations = busStopLocations
+        self._isShowListBusStop = isShowListBusStop // Use the underscore to access the binding
     }
+
     
     func addMarkets(mapView: GMSMapView) {
         let marketView = UIImageView(
@@ -28,14 +47,7 @@ class Coordinator: NSObject {
             market.snippet = busStopLocation.ward
             market.iconView = marketView
             market.appearAnimation = .pop
-            market.isTappable
-
             market.map = mapView
         }
-    }
-
-    func moveCamera(mapView: GMSMapView) {
-        let camera = GMSCameraPosition.camera(withLatitude: 16.048885997815244, longitude: 108.18646274789408, zoom: 15)
-        mapView.camera = camera
     }
 }

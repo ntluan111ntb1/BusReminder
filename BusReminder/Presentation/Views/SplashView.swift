@@ -18,9 +18,6 @@ struct SplashView: View {
             } else {
                 LottieView(url: URL(string: "https://lottie.host/936c8711-79fa-4ed1-9658-4e4e5a4ff29d/OQeVXjwnuQ.json")!)
                     .navigationBarHidden(true)
-                    .onAppear {
-                        print("sdsd")
-                    }
             }
         }
         .navigationViewStyle(.stack)

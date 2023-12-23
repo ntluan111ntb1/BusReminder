@@ -42,15 +42,44 @@ struct BusStopLocationsView: View {
         }
         .onAppear {
             if let coordinate = locationManager.userLocation?.coordinate {
-                viewModel.getBusStopLocations(
-                    parameters: BusStopPrameters(
-                        location: "\(coordinate.latitude),\(coordinate.longitude)",
-                        keyword: Constants.GoogleMapUrlPrams.keyword,
-                        radius: 1500,
-                        key: Constants.GoogleMapUrlPrams.key)
-                )
+                //                viewModel.getBusStopLocations(
+                //                    parameters: BusStopPrameters(
+                //                        location: "\(coordinate.latitude),\(coordinate.longitude)",
+                //                        keyword: Constants.GoogleMapUrlPrams.keyword,
+                //                        radius: 1500,
+                //                        key: Constants.GoogleMapUrlPrams.key)
+                //                )
             }
         }
         .navigationBarHidden(true)
+    }
+    
+    private var busStopLocations: BusStopLocations {
+        if let coordinate = locationManager.userLocation?.coordinate {
+            return BusStopLocations(results: [
+                ResultDomain(
+                    geometry: GeometryDomain(
+                        location: CLLocationCoordinate2D(latitude: coordinate.latitude+0.001, longitude: coordinate.longitude+0.001)
+                    ),
+                    address: "address 1",
+                    ward: "ward 1"
+                ),
+                ResultDomain(
+                    geometry: GeometryDomain(
+                        location: CLLocationCoordinate2D(latitude: coordinate.latitude+0.002, longitude: coordinate.longitude+0.002)
+                    ),
+                    address: "address 1",
+                    ward: "ward 1"
+                ),
+                ResultDomain(
+                    geometry: GeometryDomain(
+                        location: CLLocationCoordinate2D(latitude: coordinate.latitude+0.0003, longitude: coordinate.longitude+0.0003)
+                    ),
+                    address: "address 1",
+                    ward: "ward 1"
+                )
+            ])
+        }
+        return BusStopLocations(results: [])
     }
 }

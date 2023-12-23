@@ -14,33 +14,7 @@ struct SearchView: View {
     @State var navigationTag: String?
     var body: some View {
         VStack(spacing: 0) {
-            HStack {
-                Image(systemName: "magnifyingglass")
-                TextField("Nhập vị trí", text: $locationManager.searchText)
-                    .padding(8)
-                Button {
-                    locationManager.searchText = ""
-                } label: {
-                    Image(systemName: "x.circle")
-                }
-            }
-            .padding(.horizontal)
-            .background(.gray, in: RoundedRectangle(cornerRadius: 8).stroke(lineWidth: 1))
             Button {
-                // MARK: Setting Map Region
-                if let coordinate = locationManager.userLocation?.coordinate {
-                    locationManager.mapView.region = .init(
-                        center: coordinate,
-                        latitudinalMeters: 1000,
-                        longitudinalMeters: 1000
-                    )
-                    locationManager.addDraggablePin(coordinate: coordinate)
-                    locationManager.updatePlacemark(location: .init(
-                        latitude: coordinate.latitude,
-                        longitude: coordinate.longitude)
-                    )
-                }
-                // MARK: Navigation to MapView
                 navigationTag = "MAPVIEW"
             } label: {
                 Label {
@@ -55,7 +29,7 @@ struct SearchView: View {
         .frame(maxWidth: .infinity, alignment: .top)
         .background {
             NavigationLink(tag: "MAPVIEW", selection: $navigationTag) {
-                BusStopLocationsView()
+                BusStopLocationsView(isShowInfoMarket: .constant(false))
                     .environmentObject(locationManager)
             } label: {
             }
