@@ -14,6 +14,13 @@ extension Coordinator: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         // Đã nhấn vào marker, bạn có thể xử lý logic ở đây
         parent.isShowListBusStop = true
+        parent.busStopInfo = ResultDomain(
+            geometry: GeometryDomain(
+                location: CLLocationCoordinate2D(latitude: marker.position.latitude, longitude: marker.position.longitude)
+            ),
+            address: marker.title ?? "",
+            ward: marker.snippet ?? ""
+        )
         let camera = GMSCameraPosition.camera(
             withLatitude: marker.position.latitude,
             longitude: marker.position.longitude,

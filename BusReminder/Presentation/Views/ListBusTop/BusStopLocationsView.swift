@@ -14,6 +14,11 @@ struct BusStopLocationsView: View {
     @Environment(\.dismiss) var dismiss
 
     @State var isShowListBusStop = false
+    @State var busStopInfo = ResultDomain(
+        geometry: GeometryDomain(location: CLLocationCoordinate2D()),
+        address: "",
+        ward: ""
+    )
 
     var body: some View {
         VStack {
@@ -21,9 +26,16 @@ struct BusStopLocationsView: View {
                 ProgressView()
             } else {
                 ZStack(alignment: .bottom) {
-                    MapView(busStopLocations: .constant(busStopLocations), isShowListBusStop: $isShowListBusStop)
+                    MapView(
+                        busStopLocations: .constant(busStopLocations),
+                        isShowListBusStop: $isShowListBusStop,
+                        busStopInfo: $busStopInfo
+                    )
                         .environmentObject(locationManager)
                         .ignoresSafeArea()
+                    if isShowListBusStop {
+                        InfoBusStopView(busStopInfo: busStopInfo)
+                    }
                     Button {
                         dismiss()
                     } label: {
