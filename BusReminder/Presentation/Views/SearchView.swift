@@ -29,7 +29,7 @@ struct SearchView: View {
         .frame(maxWidth: .infinity, alignment: .top)
         .background {
             NavigationLink(tag: "MAPVIEW", selection: $navigationTag) {
-                BusStopLocationsView(isShowInfoMarket: .constant(false))
+                BusStopLocationsView()
                     .environmentObject(locationManager)
             } label: {
             }

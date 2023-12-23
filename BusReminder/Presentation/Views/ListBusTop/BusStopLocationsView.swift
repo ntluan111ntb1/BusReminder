@@ -21,10 +21,9 @@ struct BusStopLocationsView: View {
                 ProgressView()
             } else {
                 ZStack(alignment: .bottom) {
-                    MapView(busStopLocations: $viewModel.busStopLocations)
+                    MapView(busStopLocations: .constant(busStopLocations), isShowListBusStop: $isShowListBusStop)
                         .environmentObject(locationManager)
                         .ignoresSafeArea()
-                    ListBusStopsView(busStopLocations: viewModel.busStopLocations)
                     Button {
                         dismiss()
                     } label: {
