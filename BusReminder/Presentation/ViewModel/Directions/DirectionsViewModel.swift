@@ -9,18 +9,20 @@ import Foundation
 import Combine
 import OSLog
 
+
 final class DirectionsViewModel: ObservableObject {
     @Published var directions = Directions(routes: [])
-
+    @Published var isLoadMore = true
+    
     private var disposables = Set<AnyCancellable>()
     private let logger = Logger()
-
-    func getDirections(parameters: DirectionsPrameter) {
+    
+    func getDirections(parameters: DirectionsPrameter, directionsGroup: DispatchGroup) {
         DirectionsHttp.getDirections(parameters: parameters)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] completion in
                 guard let self = self else { return }
-
+                
                 switch completion {
                 case .finished:
                     break
@@ -29,7 +31,9 @@ final class DirectionsViewModel: ObservableObject {
                 }
             }, receiveValue: { [weak self] response in
                 guard let self = self else { return }
-                self.directions.routes.append(contentsOf: response.routes)
+                self.directions.routes = response.routes
+                isLoadMore = false
+                directionsGroup.leave()
             })
             .store(in: &disposables)
     }

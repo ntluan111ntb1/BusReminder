@@ -13,6 +13,7 @@ struct Directions: Codable {
 
 struct Route: Codable {
     var legs: [Leg]
+    let overviewPolyline: OverviewPolyline
 }
 
 struct Leg: Codable {
@@ -26,6 +27,10 @@ struct Leg: Codable {
 struct TextValue: Codable {
     let text: String
     let value: Int
+}
+
+struct OverviewPolyline: Codable {
+    let points: String
 }
 
 struct Step: Codable {

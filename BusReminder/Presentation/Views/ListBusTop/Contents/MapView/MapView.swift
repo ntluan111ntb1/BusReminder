@@ -35,9 +35,19 @@ struct MapView: UIViewRepresentable {
     }
 
     func makeCoordinator() -> Coordinator {
+        if let coordinate = locationManager.userLocation?.coordinate {
+            return Coordinator(
+                busStopLocations: busStopLocations,
+                isShowListBusStop: $isShowListBusStop,
+                coordinate: coordinate,
+                self
+            )
+        }
         return Coordinator(
             busStopLocations: busStopLocations,
-            isShowListBusStop: $isShowListBusStop, self
+            isShowListBusStop: $isShowListBusStop,
+            coordinate: CLLocationCoordinate2D(latitude: 10, longitude: 10),
+            self
         )
     }
 

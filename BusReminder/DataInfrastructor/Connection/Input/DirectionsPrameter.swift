@@ -13,12 +13,12 @@ struct DirectionsPrameter: Encodable {
     let origin: String
     let destination: String
     let key: String
-
-    init() {
+    
+    init(origin: String, destination: String) {
         self.mode = "walking"
         self.avoid = "highways"
-        self.origin = "15.9804019,108.2733526"
-        self.destination = "15.9804019,108.2733526"
+        self.origin = origin
+        self.destination = destination
         self.key = Constants.GoogleMapUrlPrams.key
     }
 }
