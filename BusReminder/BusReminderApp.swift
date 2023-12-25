@@ -12,7 +12,7 @@ import GoogleMaps
 struct BusReminderApp: App {
     
     init() {
-        GMSServices.provideAPIKey("AIzaSyBzXKSCi5fvi6ha15YDS8eyIz0jfMnsGX8")
+        GMSServices.provideAPIKey(Constants.GoogleMapUrlPrams.key)
     }
     
     var body: some Scene {

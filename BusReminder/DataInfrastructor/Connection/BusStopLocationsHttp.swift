@@ -18,7 +18,7 @@ final class BusStopLocationsHttp {
         location: "16.048885997815244,108.18646274789408",
         keyword: "bus",
         radius: 1500,
-        key: "AIzaSyBzXKSCi5fvi6ha15YDS8eyIz0jfMnsGX8"
+        key: Constants.GoogleMapUrlPrams.key
     )
     static let url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
 
@@ -31,7 +31,7 @@ final class BusStopLocationsHttp {
             .eraseToAnyPublisher()
         }
 
-        return AlamofireNetworkService.shared.fetchData(baseUrl: baseUrl, paramters: parameters)
+        return AlamofireNetworkService.shared.fetchData(baseUrl: baseUrl, parameters: parameters)
             .flatMap { (response: BusStopLocationsEntity) -> AnyPublisher<BusStopLocations, NetworkError> in
                 let mappedResult = BusStopLocationsMapper.map(entity: response)
                 return Result.Publisher(mappedResult).eraseToAnyPublisher()

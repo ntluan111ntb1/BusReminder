@@ -14,6 +14,7 @@ extension Coordinator: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         // Đã nhấn vào marker, bạn có thể xử lý logic ở đây
         parent.isShowListBusStop = true
+        parent.viewModel.getDirections(parameters: DirectionsPrameter())
         parent.busStopInfo = ResultDomain(
             geometry: GeometryDomain(
                 location: CLLocationCoordinate2D(latitude: marker.position.latitude, longitude: marker.position.longitude)

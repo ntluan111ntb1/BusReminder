@@ -12,6 +12,7 @@ struct MapView: UIViewRepresentable {
     typealias UIViewType = GMSMapView
 
     @EnvironmentObject var locationManager: LocationManager
+    @StateObject var viewModel = DirectionsViewModel()
     @Binding var busStopLocations: BusStopLocations
     @Binding var isShowListBusStop: Bool
     @Binding var busStopInfo: ResultDomain

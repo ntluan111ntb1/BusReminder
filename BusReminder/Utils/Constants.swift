@@ -9,7 +9,7 @@ import Foundation
 
 struct Constants {
     struct GoogleMapUrlPrams {
-        static let key = "AIzaSyBzXKSCi5fvi6ha15YDS8eyIz0jfMnsGX8"
+        static let key = "AIzaSyCA7W3nxPuueYPOH-UN9MxxpeUpH4tSZgI"
         static let keyword = "bus"
     }
 }
