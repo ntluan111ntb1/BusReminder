@@ -11,7 +11,7 @@ import OSLog
 
 final class BusStopLocationsViewModel: ObservableObject {
     @Published var busStopLocations = BusStopLocations(results: [])
-    @Published var isLoadMore = false
+    @Published var isLoadMore = true
 
     private var disposables = Set<AnyCancellable>()
     private let logger = Logger()
@@ -31,6 +31,7 @@ final class BusStopLocationsViewModel: ObservableObject {
             }, receiveValue: { [weak self] response in
                 guard let self = self else { return }
                 self.busStopLocations.results.append(contentsOf: response.results)
+                print(busStopLocations)
                 isLoadMore = false
             })
             .store(in: &disposables)

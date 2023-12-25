@@ -14,12 +14,6 @@ struct BusStopPrameters: Encodable {
     let key: String
 }
 final class BusStopLocationsHttp {
-    static let prameters = BusStopPrameters(
-        location: "16.048885997815244,108.18646274789408",
-        keyword: "bus",
-        radius: 1500,
-        key: Constants.GoogleMapUrlPrams.key
-    )
     static let url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
 
     static func getBusStopLocation(parameters: BusStopPrameters) -> AnyPublisher<BusStopLocations, NetworkError> {
