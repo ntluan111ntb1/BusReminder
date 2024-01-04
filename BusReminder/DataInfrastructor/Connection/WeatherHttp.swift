@@ -10,9 +10,9 @@ import Combine
 
 final class WeatherHttp {
 
-    static let url = "https://api.openweathermap.org/data/2.5/weather?appid=48532a5e16bd27acbb55cf0c9b778afc&units=metric"
+    static let url = "https://api.openweathermap.org/data/2.5/weather"
 
-    static func getDirections(parameters: WeatherParamters) -> AnyPublisher<Weather, NetworkError> {
+    static func getWeather(parameters: WeatherParamters) -> AnyPublisher<Weather, NetworkError> {
         guard let baseUrl = URL(string: url) else {
             return Fail(error: NetworkError(
                 status: 404,
