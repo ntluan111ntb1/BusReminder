@@ -30,6 +30,12 @@
 		0806F5232B348ADB009E57AB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F50F2B348ADB009E57AB /* LocationManager.swift */; };
 		08137B982B46F9E600BDAC8C /* BusStopPrameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08137B972B46F9E600BDAC8C /* BusStopPrameters.swift */; };
 		08137B9A2B46FA3B00BDAC8C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08137B992B46FA3B00BDAC8C /* HomeView.swift */; };
+		08137B9D2B46FB5D00BDAC8C /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08137B9C2B46FB5D00BDAC8C /* WeatherView.swift */; };
+		08137B9F2B46FC1000BDAC8C /* WeatherHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08137B9E2B46FC1000BDAC8C /* WeatherHttp.swift */; };
+		08137BA12B46FC4200BDAC8C /* WeatherParamters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08137BA02B46FC4200BDAC8C /* WeatherParamters.swift */; };
+		08137BA32B46FD4E00BDAC8C /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08137BA22B46FD4E00BDAC8C /* Weather.swift */; };
+		08137BA52B46FD7E00BDAC8C /* WeatherEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08137BA42B46FD7E00BDAC8C /* WeatherEntity.swift */; };
+		08137BA72B46FDAE00BDAC8C /* WeatherMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08137BA62B46FDAE00BDAC8C /* WeatherMapper.swift */; };
 		082AE2FA2B39C4CC00687D4D /* DirectionsHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082AE2F92B39C4CC00687D4D /* DirectionsHttp.swift */; };
 		082AE2FC2B39C4ED00687D4D /* DirectionsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082AE2FB2B39C4ED00687D4D /* DirectionsMapper.swift */; };
 		082AE2FE2B39C4F900687D4D /* DirectionsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082AE2FD2B39C4F900687D4D /* DirectionsEntity.swift */; };
@@ -69,6 +75,12 @@
 		0806F50F2B348ADB009E57AB /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		08137B972B46F9E600BDAC8C /* BusStopPrameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopPrameters.swift; sourceTree = "<group>"; };
 		08137B992B46FA3B00BDAC8C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		08137B9C2B46FB5D00BDAC8C /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		08137B9E2B46FC1000BDAC8C /* WeatherHttp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHttp.swift; sourceTree = "<group>"; };
+		08137BA02B46FC4200BDAC8C /* WeatherParamters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherParamters.swift; sourceTree = "<group>"; };
+		08137BA22B46FD4E00BDAC8C /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		08137BA42B46FD7E00BDAC8C /* WeatherEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEntity.swift; sourceTree = "<group>"; };
+		08137BA62B46FDAE00BDAC8C /* WeatherMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMapper.swift; sourceTree = "<group>"; };
 		082AE2F92B39C4CC00687D4D /* DirectionsHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsHttp.swift; sourceTree = "<group>"; };
 		082AE2FB2B39C4ED00687D4D /* DirectionsMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsMapper.swift; sourceTree = "<group>"; };
 		082AE2FD2B39C4F900687D4D /* DirectionsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsEntity.swift; sourceTree = "<group>"; };
@@ -154,6 +166,7 @@
 				0806F4E62B348ADB009E57AB /* Input */,
 				0806F4E82B348ADB009E57AB /* BusStopLocationsHttp.swift */,
 				082AE2F92B39C4CC00687D4D /* DirectionsHttp.swift */,
+				08137B9E2B46FC1000BDAC8C /* WeatherHttp.swift */,
 			);
 			path = Connection;
 			sourceTree = "<group>";
@@ -164,6 +177,7 @@
 				0806F4E72B348ADB009E57AB /* EmptyInput.swift */,
 				082AE3042B39C54400687D4D /* DirectionsPrameter.swift */,
 				08137B972B46F9E600BDAC8C /* BusStopPrameters.swift */,
+				08137BA02B46FC4200BDAC8C /* WeatherParamters.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -173,6 +187,7 @@
 			children = (
 				0806F4EA2B348ADB009E57AB /* BusStopLocationsMapper.swift */,
 				082AE2FB2B39C4ED00687D4D /* DirectionsMapper.swift */,
+				08137BA62B46FDAE00BDAC8C /* WeatherMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -183,6 +198,7 @@
 				0806F4EC2B348ADB009E57AB /* Common */,
 				0806F4ED2B348ADB009E57AB /* BusStopLocationsEntity.swift */,
 				082AE2FD2B39C4F900687D4D /* DirectionsEntity.swift */,
+				08137BA42B46FD7E00BDAC8C /* WeatherEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -199,6 +215,7 @@
 			children = (
 				0806F4EF2B348ADB009E57AB /* BusStopLocations.swift */,
 				082AE3022B39C53600687D4D /* Directions.swift */,
+				08137BA22B46FD4E00BDAC8C /* Weather.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -298,6 +315,7 @@
 		0806F5062B348ADB009E57AB /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
+				08137B9B2B46FB4F00BDAC8C /* Inner */,
 				08137B992B46FA3B00BDAC8C /* HomeView.swift */,
 			);
 			path = HomeView;
@@ -328,6 +346,14 @@
 				0806F50F2B348ADB009E57AB /* LocationManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		08137B9B2B46FB4F00BDAC8C /* Inner */ = {
+			isa = PBXGroup;
+			children = (
+				08137B9C2B46FB5D00BDAC8C /* WeatherView.swift */,
+			);
+			path = Inner;
 			sourceTree = "<group>";
 		};
 		082AE2FF2B39C52200687D4D /* Directions */ = {
@@ -513,8 +539,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08137B9D2B46FB5D00BDAC8C /* WeatherView.swift in Sources */,
 				0806F51B2B348ADB009E57AB /* BusStopLocationsView.swift in Sources */,
+				08137BA12B46FC4200BDAC8C /* WeatherParamters.swift in Sources */,
 				0806F5202B348ADB009E57AB /* Constants.swift in Sources */,
+				08137BA32B46FD4E00BDAC8C /* Weather.swift in Sources */,
 				08137B982B46F9E600BDAC8C /* BusStopPrameters.swift in Sources */,
 				0806F5102B348ADB009E57AB /* EmptyInput.swift in Sources */,
 				0806F51E2B348ADB009E57AB /* SplashView.swift in Sources */,
@@ -529,13 +558,16 @@
 				08137B9A2B46FA3B00BDAC8C /* HomeView.swift in Sources */,
 				0806F51F2B348ADB009E57AB /* LottieView.swift in Sources */,
 				0806F5122B348ADB009E57AB /* BusStopLocationsMapper.swift in Sources */,
+				08137BA72B46FDAE00BDAC8C /* WeatherMapper.swift in Sources */,
 				0806F5142B348ADB009E57AB /* BusStopLocations.swift in Sources */,
 				0871D8F62B374C3400EC2DFB /* ButtonFullWidthView.swift in Sources */,
 				0806F5192B348ADB009E57AB /* ListBusStopsView.swift in Sources */,
 				0871D8F42B374B5400EC2DFB /* Text.swift in Sources */,
+				08137BA52B46FD7E00BDAC8C /* WeatherEntity.swift in Sources */,
 				0806F5232B348ADB009E57AB /* LocationManager.swift in Sources */,
 				082AE3052B39C54400687D4D /* DirectionsPrameter.swift in Sources */,
 				082AE2FE2B39C4F900687D4D /* DirectionsEntity.swift in Sources */,
+				08137B9F2B46FC1000BDAC8C /* WeatherHttp.swift in Sources */,
 				0806F51D2B348ADB009E57AB /* SearchView.swift in Sources */,
 				082AE3012B39C52200687D4D /* DirectionsViewModel.swift in Sources */,
 				0806F5132B348ADB009E57AB /* BusStopLocationsEntity.swift in Sources */,
