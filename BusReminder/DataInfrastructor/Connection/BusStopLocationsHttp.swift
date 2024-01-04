@@ -7,12 +7,7 @@
 
 import Foundation
 import Combine
-struct BusStopPrameters: Encodable {
-    let location: String
-    let keyword: String
-    let radius: Int
-    let key: String
-}
+
 final class BusStopLocationsHttp {
     static let url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
 
