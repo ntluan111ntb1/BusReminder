@@ -21,7 +21,8 @@ final class DirectionsHttp {
             )
             .eraseToAnyPublisher()
         }
-
+        let param = "?mode=\(parameters.mode)&avoid=\(parameters.avoid)&origin=\(parameters.origin)&destination=\(parameters.destination)&key=\(parameters.key)"
+        print("URL = \(baseUrl)\(param)")
         return AlamofireNetworkService.shared.fetchData(baseUrl: baseUrl, parameters: parameters)
             .flatMap { (response: DirectionsEntity) -> AnyPublisher<Directions, NetworkError> in
                 let mappedResult = DirectionsMapper.map(entity: response)

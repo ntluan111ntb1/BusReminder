@@ -24,7 +24,8 @@ final class BusStopLocationsHttp {
             )
             .eraseToAnyPublisher()
         }
-
+        let param = "?location=\(parameters.location)&keyword=\(parameters.keyword)&radius=\(parameters.radius)&key=\(parameters.key)"
+        print("URL = \(baseUrl)\(param)")
         return AlamofireNetworkService.shared.fetchData(baseUrl: baseUrl, parameters: parameters)
             .flatMap { (response: BusStopLocationsEntity) -> AnyPublisher<BusStopLocations, NetworkError> in
                 let mappedResult = BusStopLocationsMapper.map(entity: response)
