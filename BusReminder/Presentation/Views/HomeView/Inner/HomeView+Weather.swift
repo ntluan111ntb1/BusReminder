@@ -8,37 +8,29 @@
 import SwiftUI
 
 extension HomeView {
+    @ViewBuilder
     func makeWeatherView() -> some View {
-        VStack {
-            if let weather = weatherViewModel.weather {
-                VStack(spacing: 16) {
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text(weather.name)
-                            .bold()
-                            .font(.title)
-                        
-                        Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute()))")
-                            .fontWeight(.light)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    HStack {
-                        VStack(spacing: 20) {
-                            Image(systemName: "cloud")
-                                .font(.system(size: 40))
-                            
-                            Text("\(weather.weather[0].main)")
-                        }
-                        .frame(width: 150, alignment: .leading)
-                        
-                        Spacer()
-                        
-                        Text(weather.main.temp.roundDouble() + "°")
-                            .font(.system(size: 100))
-                            .fontWeight(.bold)
-                            .padding()
-                    }
+        HStack(alignment: .top, spacing: 8) {
+            VStack(alignment: .leading) {
+                Text("Đà Nẵng")
+                    .bold()
+                    .font(.title)
+                Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute()))")
+                    .fontWeight(.light)
+            }
+            Spacer()
+            HStack(alignment: .top)  {
+                VStack(spacing: 5) {
+                    Image(systemName: "cloud")
+                        .font(.system(size: 40))
+                    Text("Trời Đẹp")
                 }
+                Text("20" + "°")
+                    .font(.system(size: 40))
+                    .fontWeight(.bold)
             }
         }
+        .padding(8)
+        .foregroundColor(.deepBlue)
     }
 }

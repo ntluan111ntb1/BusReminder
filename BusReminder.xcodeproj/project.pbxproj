@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0805439F2B4865FE00772D0A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0805439E2B4865FE00772D0A /* Color.swift */; };
 		0806F4D72B348AC0009E57AB /* BusReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F4D62B348AC0009E57AB /* BusReminderApp.swift */; };
 		0806F4DB2B348AC1009E57AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0806F4DA2B348AC1009E57AB /* Assets.xcassets */; };
 		0806F4DE2B348AC1009E57AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0806F4DD2B348AC1009E57AB /* Preview Assets.xcassets */; };
@@ -53,6 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0805439E2B4865FE00772D0A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		0806F4D32B348AC0009E57AB /* BusReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0806F4D62B348AC0009E57AB /* BusReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusReminderApp.swift; sourceTree = "<group>"; };
 		0806F4DA2B348AC1009E57AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -400,6 +402,7 @@
 				0871D8F32B374B5400EC2DFB /* Text.swift */,
 				0871D8F12B3749D500EC2DFB /* UIScreen.swift */,
 				08137BAB2B47097700BDAC8C /* Double.swift */,
+				0805439E2B4865FE00772D0A /* Color.swift */,
 			);
 			path = Extendsion;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				08137B9A2B46FA3B00BDAC8C /* HomeView.swift in Sources */,
 				08137BAC2B47097700BDAC8C /* Double.swift in Sources */,
 				0806F51F2B348ADB009E57AB /* LottieView.swift in Sources */,
+				0805439F2B4865FE00772D0A /* Color.swift in Sources */,
 				0806F5122B348ADB009E57AB /* BusStopLocationsMapper.swift in Sources */,
 				08137BA72B46FDAE00BDAC8C /* WeatherMapper.swift in Sources */,
 				0806F5142B348ADB009E57AB /* BusStopLocations.swift in Sources */,

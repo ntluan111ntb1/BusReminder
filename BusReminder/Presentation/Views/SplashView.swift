@@ -11,7 +11,7 @@ import Lottie
 struct SplashView: View {
     @StateObject var locationManager: LocationManager = .init()
     var body: some View {
-        NavigationView {
+        NavigationStack {
             if ((locationManager.userLocation?.coordinate) != nil) {
                 HomeView()
                     .environmentObject(locationManager)
