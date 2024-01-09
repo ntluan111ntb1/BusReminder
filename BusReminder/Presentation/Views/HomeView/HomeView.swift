@@ -9,7 +9,10 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var locationManager: LocationManager
+    // Init ViewModel
     @StateObject var weatherViewModel = WeatherViewModel()
+    @StateObject var directionsRouteViewModel = DirectionsRouteViewModel()
+    
     @State var searchText = ""
     @State var isShowMapView = false
     var body: some View {
@@ -25,6 +28,18 @@ struct HomeView: View {
             }
             VStack(alignment: .leading) {
                 makeDirectionToBusStop()
+                //To Do
+                Button {
+                    directionsRouteViewModel.getDirectionsRoute(parameters: DirectionsRouteParameters())
+                } label: {
+                    Text("GET directions Route")
+                        .fontStyle(.largeBold)
+                        .padding(8)
+                        .background {
+                            RoundedCornersShape(corners: .allCorners, radius: 12)
+                                .fill(Color.deepBlue)
+                        }
+                }
                 Spacer()
             }
             .padding()
