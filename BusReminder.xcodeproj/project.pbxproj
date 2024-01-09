@@ -311,7 +311,6 @@
 			isa = PBXGroup;
 			children = (
 				0871D8EA2B37465B00EC2DFB /* InfoBusStop */,
-				0806F5032B348ADB009E57AB /* Coordinator */,
 				0806F4FD2B348ADB009E57AB /* ListBusStop */,
 			);
 			path = Contents;
@@ -328,6 +327,7 @@
 		0806F4FF2B348ADB009E57AB /* MapView */ = {
 			isa = PBXGroup;
 			children = (
+				0806F5032B348ADB009E57AB /* Coordinator */,
 				0806F5002B348ADB009E57AB /* MapView.swift */,
 			);
 			path = MapView;
