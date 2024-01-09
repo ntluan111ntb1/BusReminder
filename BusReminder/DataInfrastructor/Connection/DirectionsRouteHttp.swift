@@ -28,7 +28,7 @@ final class DirectionsRouteHttp {
             baseUrl: baseUrl,
             method: .post,
             headers: headers, 
-            parameters: DirectionsRouteParameters()
+            parameters: parameters
         )
         .flatMap { (response: DirectionsRouteEntity) -> AnyPublisher<DirectionsRoute, NetworkError> in
             let mappedResult = DirectionsRouteMapper.map(entity: response)

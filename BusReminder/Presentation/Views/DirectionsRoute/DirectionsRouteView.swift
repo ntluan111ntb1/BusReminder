@@ -19,8 +19,17 @@ struct DirectionsRouteView: View {
                 .ignoresSafeArea()
         }
         .onAppear {
-            guard let coordinate = locationManager.userLocation?.coordinate {
-                viewModel.getDirectionsRoute(parameters: DirectionsRouteParameters())
+            if let coordinate = locationManager.userLocation?.coordinate {
+                viewModel.getDirectionsRoute(parameters: DirectionsRouteParameters(
+                    origin: DirectionsRouteParameters.Location(
+                        location: DirectionsRouteParameters.Location.LatLng(
+                            latLng: DirectionsRouteParameters.Location.LatLng.Coordinate(
+                                latitude: coordinate.latitude,
+                                longitude: coordinate.longitude
+                            )
+                        )
+                    )
+                ))
             }
         }
     }

@@ -9,7 +9,16 @@ import Foundation
 
 struct DirectionsRouteParameters: Codable {
     struct Location: Codable {
-        let address: String
+        let location: LatLng
+        
+        struct LatLng: Codable {
+            let latLng: Coordinate
+            
+            struct Coordinate: Codable {
+                let latitude: Double
+                let longitude: Double
+            }
+        }
     }
 
     struct TransitPreferences: Codable {
@@ -25,9 +34,16 @@ struct DirectionsRouteParameters: Codable {
     let polylineQuality: String
     let polylineEncoding: String
 
-    init() {
-        self.origin = DirectionsRouteParameters.Location(address: "FPT Complex Đà Nẵng")
-        self.destination = DirectionsRouteParameters.Location(address: "Co.op Mart Đà Nẵng")
+    init(origin: Location) {
+        self.origin = origin
+        self.destination = Location(
+            location: Location.LatLng(
+                latLng: Location.LatLng.Coordinate(
+                    latitude: 37.7871731,
+                    longitude: -122.3957344
+                )
+            )
+        )
         self.travelMode = "TRANSIT"
         self.computeAlternativeRoutes = false
         self.transitPreferences = TransitPreferences(routingPreference: "LESS_WALKING", allowedTravelModes: "BUS")
