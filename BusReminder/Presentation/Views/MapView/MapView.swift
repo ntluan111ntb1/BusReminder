@@ -29,6 +29,15 @@ struct MapView: UIViewRepresentable {
             mapView.camera = camera
             mapView.isMyLocationEnabled = true
         }
+        do {
+            if let styleURL = Bundle.main.url(forResource: "MapStyle", withExtension: "json") {
+                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+            } else {
+                NSLog("Unable to find MapStyle.json")
+            }
+        } catch {
+            NSLog("One or more of the map styles failed to load. \(error)")
+        }
         context.coordinator.addMarkets(mapView: mapView)
         mapView.delegate = context.coordinator
         return mapView
