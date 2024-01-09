@@ -36,13 +36,15 @@ struct MapView: UIViewRepresentable {
         } catch {
             NSLog("One or more of the map styles failed to load. \(error)")
         }
+        context.coordinator.addDirectionsRoutes(mapView: mapView)
         return mapView
     }
 
     func makeCoordinator() -> Coordinator {
         return Coordinator(
             coordinate: CLLocationCoordinate2D(latitude: 10, longitude: 10),
-            self
+            self,
+            directionsRoute: viewModel.directionsRoute ?? DirectionsRoute(routes: [])
         )
     }
 

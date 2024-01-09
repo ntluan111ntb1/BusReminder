@@ -9,14 +9,16 @@ import SwiftUI
 
 struct DirectionsRouteView: View {
     @EnvironmentObject var locationManager: LocationManager
-    @StateObject var viewModel = DirectionsRouteViewModel()
     @Environment(\.dismiss) var dismiss
+    @StateObject var viewModel = DirectionsRouteViewModel()
     
+    @State var search = ""
     var body: some View {
-        VStack {
+        ZStack(alignment: .top) {
             MapView()
                 .environmentObject(locationManager)
                 .ignoresSafeArea()
+            makeSearchField()
         }
         .onAppear {
             if let coordinate = locationManager.userLocation?.coordinate {

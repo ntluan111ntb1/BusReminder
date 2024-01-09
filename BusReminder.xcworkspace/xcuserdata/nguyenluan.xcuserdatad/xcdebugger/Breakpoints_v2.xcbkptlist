@@ -3,4 +3,102 @@
    uuid = "AF48CA16-0797-4860-80CB-31BB20766A86"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6162BFC-348D-4AFC-86A0-C637E76C6CF8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusReminder/Presentation/Views/MapView/Coordinator/Coordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "addDirectionsRoutes(mapView:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D6162BFC-348D-4AFC-86A0-C637E76C6CF8 - b4114d3ab46bb739"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusReminder.Coordinator.addDirectionsRoutes(mapView: __C.GMSMapView) -&gt; ()"
+                  moduleName = "BusReminder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenluan/Documents/BusReminderProject/BusReminder/BusReminder/Presentation/Views/MapView/Coordinator/Coordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "D6162BFC-348D-4AFC-86A0-C637E76C6CF8 - 3d8df497f91b38b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BusReminder.DirectionsRoute.RouteDirections) -&gt; () in BusReminder.Coordinator.addDirectionsRoutes(mapView: __C.GMSMapView) -&gt; ()"
+                  moduleName = "BusReminder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenluan/Documents/BusReminderProject/BusReminder/BusReminder/Presentation/Views/MapView/Coordinator/Coordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF11B342-F294-457C-AAFC-89E939F467BE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusReminder/Presentation/Views/DirectionsRoute/DirectionsRouteView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FCA9893E-8B23-474A-830C-F70E123D3FFA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusReminder/Presentation/Views/DirectionsRoute/DirectionsRouteView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DBD5BC9F-1619-4E9F-9ED4-886430CAE4AE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusReminder/Presentation/ViewModel/DirectionsRoute/DirectionsRouteViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getDirectionsRoute(parameters:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
