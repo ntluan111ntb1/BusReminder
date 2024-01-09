@@ -26,11 +26,7 @@ struct BusStopLocationsView: View {
                 ProgressView()
             } else {
                 ZStack(alignment: .bottom) {
-                    MapView(
-                        busStopLocations: $viewModel.busStopLocations,
-                        isShowListBusStop: $isShowListBusStop,
-                        busStopInfo: $busStopInfo
-                    )
+                    MapView()
                         .environmentObject(locationManager)
                         .ignoresSafeArea()
                     if isShowListBusStop {
@@ -52,17 +48,6 @@ struct BusStopLocationsView: View {
             }
         }
         .onAppear {
-            if let coordinate = locationManager.userLocation?.coordinate {
-                viewModel.getBusStopLocations(
-                    parameters: BusStopPrameters(
-                        location: "\(coordinate.latitude),\(coordinate.longitude)",
-                        keyword: Constants.GoogleMapUrlPrams.keyword,
-                        radius: 1500,
-                        key: Constants.GoogleMapUrlPrams.key
-                    )
-                )
-                print(viewModel.busStopLocations)
-            }
         }
         .navigationBarHidden(true)
     }

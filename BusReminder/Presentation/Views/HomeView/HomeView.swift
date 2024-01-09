@@ -30,7 +30,7 @@ struct HomeView: View {
                 makeDirectionToBusStop()
                 //To Do
                 Button {
-                    directionsRouteViewModel.getDirectionsRoute(parameters: DirectionsRouteParameters())
+                    isShowMapView = true
                 } label: {
                     Text("GET directions Route")
                         .fontStyle(.largeBold)
@@ -46,7 +46,7 @@ struct HomeView: View {
             .frame(width: UIScreen.screenWidth)
         }
         .navigationDestination(isPresented: $isShowMapView) {
-            BusStopLocationsView()
+            DirectionsRouteView()
                 .environmentObject(locationManager)
         }
     }

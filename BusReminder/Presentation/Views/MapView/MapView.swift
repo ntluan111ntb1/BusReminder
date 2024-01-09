@@ -12,10 +12,8 @@ struct MapView: UIViewRepresentable {
     typealias UIViewType = GMSMapView
 
     @EnvironmentObject var locationManager: LocationManager
-    @StateObject var viewModel = DirectionsViewModel()
-    @Binding var busStopLocations: BusStopLocations
-    @Binding var isShowListBusStop: Bool
-    @Binding var busStopInfo: ResultDomain
+    @StateObject var viewModel = DirectionsRouteViewModel()
+    
     /// Mark: Create Map View
     /// Add user location view
     func makeUIView(context: Context) -> GMSMapView {
@@ -38,23 +36,11 @@ struct MapView: UIViewRepresentable {
         } catch {
             NSLog("One or more of the map styles failed to load. \(error)")
         }
-        context.coordinator.addMarkets(mapView: mapView)
-        mapView.delegate = context.coordinator
         return mapView
     }
 
     func makeCoordinator() -> Coordinator {
-        if let coordinate = locationManager.userLocation?.coordinate {
-            return Coordinator(
-                busStopLocations: busStopLocations,
-                isShowListBusStop: $isShowListBusStop,
-                coordinate: coordinate,
-                self
-            )
-        }
         return Coordinator(
-            busStopLocations: busStopLocations,
-            isShowListBusStop: $isShowListBusStop,
             coordinate: CLLocationCoordinate2D(latitude: 10, longitude: 10),
             self
         )
