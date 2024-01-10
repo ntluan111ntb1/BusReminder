@@ -15,10 +15,14 @@ struct DirectionsRouteView: View {
     @State var search = ""
     var body: some View {
         ZStack(alignment: .top) {
-            MapView()
-                .environmentObject(locationManager)
-                .ignoresSafeArea()
-            makeSearchField()
+            if !viewModel.isLoading {
+                MapView(directionsRoute: viewModel.directionsRoute ?? DirectionsRoute(routes: []))
+                    .environmentObject(locationManager)
+                    .ignoresSafeArea()
+                makeSearchField()
+            } else {
+                ProgressView()
+            }
         }
         .onAppear {
             if let coordinate = locationManager.userLocation?.coordinate {

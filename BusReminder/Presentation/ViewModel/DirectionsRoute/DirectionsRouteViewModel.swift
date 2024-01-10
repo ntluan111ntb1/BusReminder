@@ -13,6 +13,7 @@ import OSLog
 
 final class DirectionsRouteViewModel: ObservableObject {
     @Published var directionsRoute: DirectionsRoute?
+    @Published var isLoading = true
 
     private var disposables = Set<AnyCancellable>()
     private let logger = Logger()
@@ -31,7 +32,7 @@ final class DirectionsRouteViewModel: ObservableObject {
                 }
             }, receiveValue: { [weak self] response in
                 guard let self = self else { return }
-                print("==> \(response)")
+                isLoading = false
                 directionsRoute = response
             })
             .store(in: &disposables)

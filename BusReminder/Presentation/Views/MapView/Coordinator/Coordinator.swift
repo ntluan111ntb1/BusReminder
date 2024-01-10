@@ -13,7 +13,6 @@ class Coordinator: NSObject {
     let coordinate: CLLocationCoordinate2D
     var parent: MapView
     let directionsRoute: DirectionsRoute
-    
     init(
         coordinate: CLLocationCoordinate2D,
         _ mapView: MapView,
@@ -26,12 +25,14 @@ class Coordinator: NSObject {
     
     func addDirectionsRoutes(mapView: GMSMapView) {
         directionsRoute.routes.forEach { route in
-            let part = GMSPath.init(fromEncodedPath: route.legs.first?.polyline.encodedPolyline ?? "")
-            let polyline = GMSPolyline.init(path: part)
-            polyline.strokeColor = .green
-            polyline.strokeWidth = 4
-            polyline.map = mapView
+            route.legs.first?.steps.forEach({ step in
+                let part = GMSPath.init(fromEncodedPath: step.polyline.encodedPolyline)
+                print("Polyline: \(route.legs.first?.steps.first?.polyline.encodedPolyline ?? "")")
+                let polyline = GMSPolyline.init(path: part)
+                polyline.strokeColor = step.travelMode == "WALK" ? .red : .green
+                polyline.strokeWidth = 6
+                polyline.map = mapView
+            })
         }
     }
-
 }

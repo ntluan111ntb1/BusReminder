@@ -12,8 +12,8 @@ struct MapView: UIViewRepresentable {
     typealias UIViewType = GMSMapView
 
     @EnvironmentObject var locationManager: LocationManager
-    @StateObject var viewModel = DirectionsRouteViewModel()
-    
+    var directionsRoute: DirectionsRoute
+
     /// Mark: Create Map View
     /// Add user location view
     func makeUIView(context: Context) -> GMSMapView {
@@ -44,7 +44,7 @@ struct MapView: UIViewRepresentable {
         return Coordinator(
             coordinate: CLLocationCoordinate2D(latitude: 10, longitude: 10),
             self,
-            directionsRoute: viewModel.directionsRoute ?? DirectionsRoute(routes: [])
+            directionsRoute: directionsRoute 
         )
     }
 

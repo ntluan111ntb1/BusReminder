@@ -26,9 +26,9 @@ struct BusStopLocationsView: View {
                 ProgressView()
             } else {
                 ZStack(alignment: .bottom) {
-                    MapView()
-                        .environmentObject(locationManager)
-                        .ignoresSafeArea()
+//                    MapView()
+//                        .environmentObject(locationManager)
+//                        .ignoresSafeArea()
                     if isShowListBusStop {
                         InfoBusStopView(busStopInfo: busStopInfo)
                     }
