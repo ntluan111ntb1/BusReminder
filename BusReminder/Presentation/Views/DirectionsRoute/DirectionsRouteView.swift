@@ -10,13 +10,14 @@ import SwiftUI
 struct DirectionsRouteView: View {
     @EnvironmentObject var locationManager: LocationManager
     @Environment(\.dismiss) var dismiss
-    @StateObject var viewModel = DirectionsRouteViewModel()
+    @StateObject var directionsRouteViewModel = DirectionsRouteViewModel()
+    @StateObject var searchPlacesViewModel = SearchPlaceViewModel()
     
-    @State var search = ""
+    @State var searchText = ""
     var body: some View {
         ZStack(alignment: .top) {
-            if !viewModel.isLoading {
-                MapView(directionsRoute: viewModel.directionsRoute ?? DirectionsRoute(routes: []))
+            if !directionsRouteViewModel.isLoading {
+                MapView(directionsRoute: directionsRouteViewModel.directionsRoute ?? DirectionsRoute(routes: []))
                     .environmentObject(locationManager)
                     .ignoresSafeArea()
                 makeSearchField()
@@ -26,7 +27,7 @@ struct DirectionsRouteView: View {
         }
         .onAppear {
             if let coordinate = locationManager.userLocation?.coordinate {
-                viewModel.getDirectionsRoute(parameters: DirectionsRouteParameters(
+                directionsRouteViewModel.getDirectionsRoute(parameters: DirectionsRouteParameters(
                     origin: DirectionsRouteParameters.Location(
                         location: DirectionsRouteParameters.Location.LatLng(
                             latLng: DirectionsRouteParameters.Location.LatLng.Coordinate(

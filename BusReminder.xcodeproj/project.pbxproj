@@ -46,6 +46,12 @@
 		082AE3012B39C52200687D4D /* DirectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082AE3002B39C52200687D4D /* DirectionsViewModel.swift */; };
 		082AE3032B39C53600687D4D /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082AE3022B39C53600687D4D /* Directions.swift */; };
 		082AE3052B39C54400687D4D /* DirectionsPrameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082AE3042B39C54400687D4D /* DirectionsPrameter.swift */; };
+		0859B4B22B596CA20059E99A /* SearchPlaceParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859B4B12B596CA20059E99A /* SearchPlaceParameters.swift */; };
+		0859B4B42B596CB20059E99A /* SearchPlaceHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859B4B32B596CB20059E99A /* SearchPlaceHttp.swift */; };
+		0859B4B62B596CB90059E99A /* SearchPlaceMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859B4B52B596CB90059E99A /* SearchPlaceMapper.swift */; };
+		0859B4B82B596CC00059E99A /* SearchPlaceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859B4B72B596CC00059E99A /* SearchPlaceEntity.swift */; };
+		0859B4BA2B596CC80059E99A /* SearchPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859B4B92B596CC80059E99A /* SearchPlace.swift */; };
+		0859B4BD2B596CDA0059E99A /* SearchPlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859B4BC2B596CDA0059E99A /* SearchPlaceViewModel.swift */; };
 		0871D8EC2B37467500EC2DFB /* InfoBusStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871D8EB2B37467500EC2DFB /* InfoBusStopView.swift */; };
 		0871D8EF2B37475200EC2DFB /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871D8EE2B37475200EC2DFB /* RoundedCornersShape.swift */; };
 		0871D8F22B3749D500EC2DFB /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871D8F12B3749D500EC2DFB /* UIScreen.swift */; };
@@ -104,6 +110,12 @@
 		082AE3002B39C52200687D4D /* DirectionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsViewModel.swift; sourceTree = "<group>"; };
 		082AE3022B39C53600687D4D /* Directions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Directions.swift; sourceTree = "<group>"; };
 		082AE3042B39C54400687D4D /* DirectionsPrameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsPrameter.swift; sourceTree = "<group>"; };
+		0859B4B12B596CA20059E99A /* SearchPlaceParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlaceParameters.swift; sourceTree = "<group>"; };
+		0859B4B32B596CB20059E99A /* SearchPlaceHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlaceHttp.swift; sourceTree = "<group>"; };
+		0859B4B52B596CB90059E99A /* SearchPlaceMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlaceMapper.swift; sourceTree = "<group>"; };
+		0859B4B72B596CC00059E99A /* SearchPlaceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlaceEntity.swift; sourceTree = "<group>"; };
+		0859B4B92B596CC80059E99A /* SearchPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlace.swift; sourceTree = "<group>"; };
+		0859B4BC2B596CDA0059E99A /* SearchPlaceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlaceViewModel.swift; sourceTree = "<group>"; };
 		0871D8EB2B37467500EC2DFB /* InfoBusStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBusStopView.swift; sourceTree = "<group>"; };
 		0871D8EE2B37475200EC2DFB /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 		0871D8F12B3749D500EC2DFB /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
@@ -195,6 +207,7 @@
 				082AE2F92B39C4CC00687D4D /* DirectionsHttp.swift */,
 				08137B9E2B46FC1000BDAC8C /* WeatherHttp.swift */,
 				08D9495D2B4D6713000CCF0C /* DirectionsRouteHttp.swift */,
+				0859B4B32B596CB20059E99A /* SearchPlaceHttp.swift */,
 			);
 			path = Connection;
 			sourceTree = "<group>";
@@ -207,6 +220,7 @@
 				08137B972B46F9E600BDAC8C /* BusStopPrameters.swift */,
 				08137BA02B46FC4200BDAC8C /* WeatherParamters.swift */,
 				08D9495B2B4D670D000CCF0C /* DirectionsRouteParameters.swift */,
+				0859B4B12B596CA20059E99A /* SearchPlaceParameters.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -218,6 +232,7 @@
 				082AE2FB2B39C4ED00687D4D /* DirectionsMapper.swift */,
 				08137BA62B46FDAE00BDAC8C /* WeatherMapper.swift */,
 				08D9495F2B4D671C000CCF0C /* DirectionsRouteMapper.swift */,
+				0859B4B52B596CB90059E99A /* SearchPlaceMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -230,6 +245,7 @@
 				082AE2FD2B39C4F900687D4D /* DirectionsEntity.swift */,
 				08137BA42B46FD7E00BDAC8C /* WeatherEntity.swift */,
 				08D949612B4D6724000CCF0C /* DirectionsRouteEntity.swift */,
+				0859B4B72B596CC00059E99A /* SearchPlaceEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -248,6 +264,7 @@
 				082AE3022B39C53600687D4D /* Directions.swift */,
 				08137BA22B46FD4E00BDAC8C /* Weather.swift */,
 				08D949632B4D672E000CCF0C /* DirectionsRoute.swift */,
+				0859B4B92B596CC80059E99A /* SearchPlace.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -264,6 +281,7 @@
 		0806F4F52B348ADB009E57AB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0859B4BB2B596CDA0059E99A /* SearchPlace */,
 				08D949652B4D673F000CCF0C /* DirectionsRoute */,
 				08137BA82B46FF8800BDAC8C /* Weather */,
 				082AE2FF2B39C52200687D4D /* Directions */,
@@ -414,6 +432,14 @@
 				082AE3002B39C52200687D4D /* DirectionsViewModel.swift */,
 			);
 			path = Directions;
+			sourceTree = "<group>";
+		};
+		0859B4BB2B596CDA0059E99A /* SearchPlace */ = {
+			isa = PBXGroup;
+			children = (
+				0859B4BC2B596CDA0059E99A /* SearchPlaceViewModel.swift */,
+			);
+			path = SearchPlace;
 			sourceTree = "<group>";
 		};
 		0871D8EA2B37465B00EC2DFB /* InfoBusStop */ = {
@@ -623,6 +649,7 @@
 				08137BAA2B46FF9A00BDAC8C /* WeatherViewModel.swift in Sources */,
 				0806F51B2B348ADB009E57AB /* BusStopLocationsView.swift in Sources */,
 				08137BA12B46FC4200BDAC8C /* WeatherParamters.swift in Sources */,
+				0859B4BA2B596CC80059E99A /* SearchPlace.swift in Sources */,
 				0806F5202B348ADB009E57AB /* Constants.swift in Sources */,
 				08D9496A2B4D6AE8000CCF0C /* DirectionsRouteView.swift in Sources */,
 				08137BA32B46FD4E00BDAC8C /* Weather.swift in Sources */,
@@ -649,10 +676,13 @@
 				0806F5122B348ADB009E57AB /* BusStopLocationsMapper.swift in Sources */,
 				08137BA72B46FDAE00BDAC8C /* WeatherMapper.swift in Sources */,
 				089807C12B4941D900316101 /* HomeView+DirectionToBusStop.swift in Sources */,
+				0859B4B62B596CB90059E99A /* SearchPlaceMapper.swift in Sources */,
+				0859B4B22B596CA20059E99A /* SearchPlaceParameters.swift in Sources */,
 				0806F5142B348ADB009E57AB /* BusStopLocations.swift in Sources */,
 				0871D8F62B374C3400EC2DFB /* ButtonFullWidthView.swift in Sources */,
 				0806F5192B348ADB009E57AB /* ListBusStopsView.swift in Sources */,
 				0871D8F42B374B5400EC2DFB /* Text.swift in Sources */,
+				0859B4B42B596CB20059E99A /* SearchPlaceHttp.swift in Sources */,
 				08137BA52B46FD7E00BDAC8C /* WeatherEntity.swift in Sources */,
 				0806F5232B348ADB009E57AB /* LocationManager.swift in Sources */,
 				082AE3052B39C54400687D4D /* DirectionsPrameter.swift in Sources */,
@@ -667,7 +697,9 @@
 				0871D8F22B3749D500EC2DFB /* UIScreen.swift in Sources */,
 				0806F5212B348ADB009E57AB /* NetworkError.swift in Sources */,
 				0806F4D72B348AC0009E57AB /* BusReminderApp.swift in Sources */,
+				0859B4BD2B596CDA0059E99A /* SearchPlaceViewModel.swift in Sources */,
 				0806F5172B348ADB009E57AB /* LocationViewModel.swift in Sources */,
+				0859B4B82B596CC00059E99A /* SearchPlaceEntity.swift in Sources */,
 				0871D8EC2B37467500EC2DFB /* InfoBusStopView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

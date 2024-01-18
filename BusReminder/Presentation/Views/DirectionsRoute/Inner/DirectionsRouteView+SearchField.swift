@@ -10,12 +10,25 @@ import SwiftUI
 extension DirectionsRouteView {
     func makeSearchField() -> some View {
         HStack {
-            Image(systemName: "magnifyingglass")
+            Button {
+                searchText = ""
+            } label: {
+                Image(systemName: "x.circle")
+            }
             TextField(
                 "",
-                text: $search,
+                text: $searchText,
                 prompt: Text("Nhập vị trí cần đến").foregroundColor(.white)
             )
+            Button {
+                if searchText != "" {
+                    searchPlacesViewModel.searchPlace(
+                        parameter: SearchPlaceParameters(textQuery: searchText)
+                    )
+                }
+            } label: {
+                Image(systemName: "magnifyingglass")
+            }
         }
         .font(.title3)
         .padding(12)
