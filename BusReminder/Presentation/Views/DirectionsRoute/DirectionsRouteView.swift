@@ -14,13 +14,46 @@ struct DirectionsRouteView: View {
     @StateObject var searchPlacesViewModel = SearchPlaceViewModel()
     
     @State var searchText = ""
+    @State private var isSheetPresented = false
     var body: some View {
-        ZStack(alignment: .top) {
+        ZStack(alignment: .bottomTrailing) {
             if !directionsRouteViewModel.isLoading {
-                MapView(directionsRoute: directionsRouteViewModel.directionsRoute ?? DirectionsRoute(routes: []))
-                    .environmentObject(locationManager)
-                    .ignoresSafeArea()
-                makeSearchField()
+                MapView(
+                    directionsRoute: directionsRouteViewModel.directionsRoute
+                    ?? DirectionsRoute(routes: [])
+                )
+                .environmentObject(locationManager)
+                .ignoresSafeArea()
+                .sheet(isPresented: $isSheetPresented, content: {
+                    VStack {
+                        makeSearchField()
+                            .presentationDetents([.medium, .large])
+                            .presentationDragIndicator(.visible)
+                            .padding(.top)
+                        //.interactiveDismissDisabled(true)
+                        List(searchPlacesViewModel.searchPlace.places) { place in
+                            Button {
+                                isSheetPresented.toggle()
+                            } label: {
+                                HStack {
+                                    Image(systemName: "location.north.circle")
+                                        .font(.title3)
+                                    Text(place.displayName.text)
+                                        .fontStyle(.medium)
+                                }
+                            }
+                        }
+                        .listStyle(.inset)
+                    }
+                })
+                Button {
+                    isSheetPresented.toggle()
+                } label: {
+                    Image(systemName: "magnifyingglass.circle.fill")
+                        .font(.system(size: 45))
+                        .foregroundColor(Color.deepBlue)
+                }
+                .padding(20)
             } else {
                 ProgressView()
             }

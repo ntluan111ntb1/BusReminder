@@ -52,6 +52,7 @@
 		0859B4B82B596CC00059E99A /* SearchPlaceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859B4B72B596CC00059E99A /* SearchPlaceEntity.swift */; };
 		0859B4BA2B596CC80059E99A /* SearchPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859B4B92B596CC80059E99A /* SearchPlace.swift */; };
 		0859B4BD2B596CDA0059E99A /* SearchPlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859B4BC2B596CDA0059E99A /* SearchPlaceViewModel.swift */; };
+		0859B4BF2B5976E60059E99A /* DirectionsRouteView+ListPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859B4BE2B5976E60059E99A /* DirectionsRouteView+ListPlace.swift */; };
 		0871D8EC2B37467500EC2DFB /* InfoBusStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871D8EB2B37467500EC2DFB /* InfoBusStopView.swift */; };
 		0871D8EF2B37475200EC2DFB /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871D8EE2B37475200EC2DFB /* RoundedCornersShape.swift */; };
 		0871D8F22B3749D500EC2DFB /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871D8F12B3749D500EC2DFB /* UIScreen.swift */; };
@@ -116,6 +117,7 @@
 		0859B4B72B596CC00059E99A /* SearchPlaceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlaceEntity.swift; sourceTree = "<group>"; };
 		0859B4B92B596CC80059E99A /* SearchPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlace.swift; sourceTree = "<group>"; };
 		0859B4BC2B596CDA0059E99A /* SearchPlaceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlaceViewModel.swift; sourceTree = "<group>"; };
+		0859B4BE2B5976E60059E99A /* DirectionsRouteView+ListPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DirectionsRouteView+ListPlace.swift"; sourceTree = "<group>"; };
 		0871D8EB2B37467500EC2DFB /* InfoBusStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBusStopView.swift; sourceTree = "<group>"; };
 		0871D8EE2B37475200EC2DFB /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 		0871D8F12B3749D500EC2DFB /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				08D9496B2B4DAA8F000CCF0C /* DirectionsRouteView+SearchField.swift */,
+				0859B4BE2B5976E60059E99A /* DirectionsRouteView+ListPlace.swift */,
 			);
 			path = Inner;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				082AE3012B39C52200687D4D /* DirectionsViewModel.swift in Sources */,
 				0806F5132B348ADB009E57AB /* BusStopLocationsEntity.swift in Sources */,
 				0806F5222B348ADB009E57AB /* NetworkService.swift in Sources */,
+				0859B4BF2B5976E60059E99A /* DirectionsRouteView+ListPlace.swift in Sources */,
 				0871D8F22B3749D500EC2DFB /* UIScreen.swift in Sources */,
 				0806F5212B348ADB009E57AB /* NetworkError.swift in Sources */,
 				0806F4D72B348AC0009E57AB /* BusReminderApp.swift in Sources */,

@@ -3,4 +3,86 @@
    uuid = "AF48CA16-0797-4860-80CB-31BB20766A86"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E7395C02-BC9E-440C-9B94-BF22D9C0966B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusReminder/Presentation/ViewModel/DirectionsRoute/DirectionsRouteViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getDirectionsRoute(parameters:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FFC3A0E6-FAFE-499A-805B-A1501C8FA053"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusReminder/Presentation/ViewModel/DirectionsRoute/DirectionsRouteViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getDirectionsRoute(parameters:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3303DCAC-7575-4316-A168-A0AAFA779C22"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusReminder/Manager/GooglePlacesManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "findPlaces(query:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3303DCAC-7575-4316-A168-A0AAFA779C22 - 81d1a51e67d92ea5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.GMSAutocompletePrediction&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BusReminder.GooglePlacesManager.findPlaces(query: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;BusReminder.Place&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "BusReminder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenluan/Documents/BusReminderProject/BusReminder/BusReminder/Manager/GooglePlacesManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "352">
+               </Location>
+               <Location
+                  uuid = "3303DCAC-7575-4316-A168-A0AAFA779C22 - 81d1a51e67d92e84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.GMSAutocompletePrediction&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BusReminder.GooglePlacesManager.findPlaces(query: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;BusReminder.Place&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "BusReminder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenluan/Documents/BusReminderProject/BusReminder/BusReminder/Manager/GooglePlacesManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "520">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

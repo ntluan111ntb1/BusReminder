@@ -13,6 +13,7 @@ struct MapView: UIViewRepresentable {
 
     @EnvironmentObject var locationManager: LocationManager
     var directionsRoute: DirectionsRoute
+    @State var place: SearchPlace.Place.Location?
 
     /// Mark: Create Map View
     /// Add user location view
@@ -36,7 +37,9 @@ struct MapView: UIViewRepresentable {
         } catch {
             NSLog("One or more of the map styles failed to load. \(error)")
         }
-        context.coordinator.addDirectionsRoutes(mapView: mapView)
+        if let place = place {
+            context.coordinator.addDirectionsRoutes(mapView: mapView)
+        }
         return mapView
     }
 
