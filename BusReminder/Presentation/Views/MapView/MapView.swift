@@ -13,33 +13,14 @@ struct MapView: UIViewRepresentable {
 
     @EnvironmentObject var locationManager: LocationManager
     var directionsRoute: DirectionsRoute
-    @State var place: SearchPlace.Place.Location?
-
+    
     /// Mark: Create Map View
     /// Add user location view
     func makeUIView(context: Context) -> GMSMapView {
         let mapView = GMSMapView.init()
-        if let coordinate = locationManager.userLocation?.coordinate {
-            let camera = GMSCameraPosition.camera(
-                withLatitude: coordinate.latitude,
-                longitude: coordinate.longitude,
-                zoom: 15
-            )
-            mapView.camera = camera
-            mapView.isMyLocationEnabled = true
-        }
-        do {
-            if let styleURL = Bundle.main.url(forResource: "MapStyle", withExtension: "json") {
-                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
-            } else {
-                NSLog("Unable to find MapStyle.json")
-            }
-        } catch {
-            NSLog("One or more of the map styles failed to load. \(error)")
-        }
-        if let place = place {
-            context.coordinator.addDirectionsRoutes(mapView: mapView)
-        }
+        makeUserLocation(mapView: mapView)
+        makeMapStyle(mapView: mapView)
+        context.coordinator.addDirectionsRoutes(mapView: mapView)
         return mapView
     }
 
@@ -52,5 +33,29 @@ struct MapView: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: GMSMapView, context: Context) {
+    }
+    
+    func makeMapStyle(mapView: GMSMapView) {
+        do {
+            if let styleURL = Bundle.main.url(forResource: "MapStyle", withExtension: "json") {
+                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+            } else {
+                NSLog("Unable to find MapStyle.json")
+            }
+        } catch {
+            NSLog("One or more of the map styles failed to load. \(error)")
+        }
+    }
+    
+    func makeUserLocation(mapView: GMSMapView) {
+        if let coordinate = locationManager.userLocation?.coordinate {
+            let camera = GMSCameraPosition.camera(
+                withLatitude: coordinate.latitude,
+                longitude: coordinate.longitude,
+                zoom: 15
+            )
+            mapView.camera = camera
+            mapView.isMyLocationEnabled = true
+        }
     }
 }

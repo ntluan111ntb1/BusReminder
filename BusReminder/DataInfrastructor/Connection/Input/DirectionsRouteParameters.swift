@@ -34,16 +34,9 @@ struct DirectionsRouteParameters: Codable {
     let polylineQuality: String
     let polylineEncoding: String
 
-    init(origin: Location) {
+    init(origin: Location, destination: Location) {
         self.origin = origin
-        self.destination = Location(
-            location: Location.LatLng(
-                latLng: Location.LatLng.Coordinate(
-                    latitude: 37.7871731,
-                    longitude: -122.3957344
-                )
-            )
-        )
+        self.destination = destination
         self.travelMode = "TRANSIT"
         self.computeAlternativeRoutes = false
         self.transitPreferences = TransitPreferences(routingPreference: "LESS_WALKING", allowedTravelModes: "BUS")

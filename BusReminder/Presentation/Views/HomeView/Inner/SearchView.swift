@@ -9,52 +9,37 @@ import SwiftUI
 import MapKit
 
 struct SearchView: View {
-    @EnvironmentObject var locationManager: LocationManager
-    // MARK: Navigation Tag to push view to Map
-    @State var navigationTag: String?
+    @State var searchText = ""
+    @StateObject var searchPlacesViewModel = SearchPlaceViewModel()
     var body: some View {
-        VStack(spacing: 0) {
+        HStack {
             Button {
-                navigationTag = "MAPVIEW"
+                searchText = ""
             } label: {
-                Label {
-                    Text("Use Current Location")
-                } icon: {
-                    Image(systemName: "location.circle.fill")
+                Image(systemName: "x.circle")
+            }
+            TextField(
+                "",
+                text: $searchText,
+                prompt: Text("Nhập vị trí cần đến").foregroundColor(.white)
+            )
+            Button {
+                if searchText != "" {
+                    searchPlacesViewModel.searchPlace(
+                        parameter: SearchPlaceParameters(textQuery: searchText)
+                    )
                 }
-            }
-            Spacer()
-        }
-        .padding()
-        .frame(maxWidth: .infinity, alignment: .top)
-        .background {
-            NavigationLink(tag: "MAPVIEW", selection: $navigationTag) {
-                BusStopLocationsView()
-                    .environmentObject(locationManager)
             } label: {
+                Image(systemName: "magnifyingglass")
             }
-            .labelsHidden()
         }
-        .navigationBarHidden(true)
-    }
-}
-
-
-
-//MARK: UIKit MapView
-struct MapViewHelper: UIViewRepresentable {
-    @EnvironmentObject var locationManager: LocationManager
-    func makeUIView(context: Context) -> MKMapView {
-        return locationManager.mapView
-    }
-
-    func updateUIView(_ uiView: MKMapView, context: Context) {
-
-    }
-}
-
-struct SearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchView()
+        .font(.title3)
+        .padding(12)
+        .foregroundColor(.white)
+        .background {
+            RoundedCornersShape(corners: .allCorners, radius: 12)
+                .fill(Color.deepBlue)
+        }
+        .padding(.horizontal)
     }
 }

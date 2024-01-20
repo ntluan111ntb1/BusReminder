@@ -11,9 +11,7 @@ struct DirectionsRouteView: View {
     @EnvironmentObject var locationManager: LocationManager
     @Environment(\.dismiss) var dismiss
     @StateObject var directionsRouteViewModel = DirectionsRouteViewModel()
-    @StateObject var searchPlacesViewModel = SearchPlaceViewModel()
-    
-    @State var searchText = ""
+    let destination: SearchPlace.Place.Location
     @State private var isSheetPresented = false
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -24,36 +22,6 @@ struct DirectionsRouteView: View {
                 )
                 .environmentObject(locationManager)
                 .ignoresSafeArea()
-                .sheet(isPresented: $isSheetPresented, content: {
-                    VStack {
-                        makeSearchField()
-                            .presentationDetents([.medium, .large])
-                            .presentationDragIndicator(.visible)
-                            .padding(.top)
-                        //.interactiveDismissDisabled(true)
-                        List(searchPlacesViewModel.searchPlace.places) { place in
-                            Button {
-                                isSheetPresented.toggle()
-                            } label: {
-                                HStack {
-                                    Image(systemName: "location.north.circle")
-                                        .font(.title3)
-                                    Text(place.displayName.text)
-                                        .fontStyle(.medium)
-                                }
-                            }
-                        }
-                        .listStyle(.inset)
-                    }
-                })
-                Button {
-                    isSheetPresented.toggle()
-                } label: {
-                    Image(systemName: "magnifyingglass.circle.fill")
-                        .font(.system(size: 45))
-                        .foregroundColor(Color.deepBlue)
-                }
-                .padding(20)
             } else {
                 ProgressView()
             }
@@ -68,6 +36,13 @@ struct DirectionsRouteView: View {
                                 longitude: coordinate.longitude
                             )
                         )
+                    ),
+                    destination: DirectionsRouteParameters.Location(
+                        location: DirectionsRouteParameters.Location.LatLng(
+                            latLng: DirectionsRouteParameters.Location.LatLng.Coordinate(
+                                latitude: destination.latitude,
+                                longitude: destination.longitude)
+                        )
                     )
                 ))
             }
@@ -75,6 +50,3 @@ struct DirectionsRouteView: View {
     }
 }
 
-#Preview {
-    DirectionsRouteView()
-}

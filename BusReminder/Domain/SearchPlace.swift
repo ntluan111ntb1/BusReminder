@@ -8,7 +8,7 @@
 import Foundation
 
 struct SearchPlace: Codable {
-    let places: [Place]
+    var places: [Place]
     struct Place: Codable, Identifiable {
         var id = UUID()
         let formattedAddress: String

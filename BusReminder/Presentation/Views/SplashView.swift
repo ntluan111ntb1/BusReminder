@@ -20,6 +20,6 @@ struct SplashView: View {
                     .navigationBarHidden(true)
             }
         }
-        .navigationViewStyle(.stack)
+        .navigationViewStyle(.automatic)
     }
 }

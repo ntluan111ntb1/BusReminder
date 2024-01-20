@@ -1,13 +1,13 @@
 //
-//  DirectionsRouteView+SearchField.swift
+//  HomeView+SearchField.swift
 //  BusReminder
 //
-//  Created by Nguyễn Luân on 09/01/2024.
+//  Created by Nguyễn Luân on 20/01/2024.
 //
 
 import SwiftUI
 
-extension DirectionsRouteView {
+extension HomeView {
     func makeSearchField() -> some View {
         HStack {
             Button {
