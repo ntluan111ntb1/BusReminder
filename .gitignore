@@ -22,4 +22,6 @@ profile
 DerivedData
 .idea/
 *.xcuserstate
+*.xcbkptlist
 BusReminder.xcworkspace/xcuserdata/nguyenluan.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+*.xcbkptlist

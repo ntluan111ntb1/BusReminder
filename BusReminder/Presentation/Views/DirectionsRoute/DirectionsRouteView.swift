@@ -11,8 +11,8 @@ struct DirectionsRouteView: View {
     @EnvironmentObject var locationManager: LocationManager
     @Environment(\.dismiss) var dismiss
     @StateObject var directionsRouteViewModel = DirectionsRouteViewModel()
+    
     let destination: SearchPlace.Place.Location
-    @State private var isSheetPresented = false
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             if !directionsRouteViewModel.isLoading {

@@ -22,7 +22,6 @@
 		0806F51A2B348ADB009E57AB /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F5002B348ADB009E57AB /* MapView.swift */; };
 		0806F51B2B348ADB009E57AB /* BusStopLocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F5012B348ADB009E57AB /* BusStopLocationsView.swift */; };
 		0806F51C2B348ADB009E57AB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F5042B348ADB009E57AB /* Coordinator.swift */; };
-		0806F51D2B348ADB009E57AB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F5052B348ADB009E57AB /* SearchView.swift */; };
 		0806F51E2B348ADB009E57AB /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F5072B348ADB009E57AB /* SplashView.swift */; };
 		0806F51F2B348ADB009E57AB /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F5092B348ADB009E57AB /* LottieView.swift */; };
 		0806F5202B348ADB009E57AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F50B2B348ADB009E57AB /* Constants.swift */; };
@@ -52,7 +51,6 @@
 		0859B4B82B596CC00059E99A /* SearchPlaceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859B4B72B596CC00059E99A /* SearchPlaceEntity.swift */; };
 		0859B4BA2B596CC80059E99A /* SearchPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859B4B92B596CC80059E99A /* SearchPlace.swift */; };
 		0859B4BD2B596CDA0059E99A /* SearchPlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859B4BC2B596CDA0059E99A /* SearchPlaceViewModel.swift */; };
-		0859B4BF2B5976E60059E99A /* DirectionsRouteView+ListPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859B4BE2B5976E60059E99A /* DirectionsRouteView+ListPlace.swift */; };
 		0871D8EC2B37467500EC2DFB /* InfoBusStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871D8EB2B37467500EC2DFB /* InfoBusStopView.swift */; };
 		0871D8EF2B37475200EC2DFB /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871D8EE2B37475200EC2DFB /* RoundedCornersShape.swift */; };
 		0871D8F22B3749D500EC2DFB /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871D8F12B3749D500EC2DFB /* UIScreen.swift */; };
@@ -88,7 +86,6 @@
 		0806F5002B348ADB009E57AB /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		0806F5012B348ADB009E57AB /* BusStopLocationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopLocationsView.swift; sourceTree = "<group>"; };
 		0806F5042B348ADB009E57AB /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		0806F5052B348ADB009E57AB /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		0806F5072B348ADB009E57AB /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		0806F5092B348ADB009E57AB /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		0806F50B2B348ADB009E57AB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -118,7 +115,6 @@
 		0859B4B72B596CC00059E99A /* SearchPlaceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlaceEntity.swift; sourceTree = "<group>"; };
 		0859B4B92B596CC80059E99A /* SearchPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlace.swift; sourceTree = "<group>"; };
 		0859B4BC2B596CDA0059E99A /* SearchPlaceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlaceViewModel.swift; sourceTree = "<group>"; };
-		0859B4BE2B5976E60059E99A /* DirectionsRouteView+ListPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DirectionsRouteView+ListPlace.swift"; sourceTree = "<group>"; };
 		0871D8EB2B37467500EC2DFB /* InfoBusStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBusStopView.swift; sourceTree = "<group>"; };
 		0871D8EE2B37475200EC2DFB /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 		0871D8F12B3749D500EC2DFB /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
@@ -415,7 +411,6 @@
 		08137B9B2B46FB4F00BDAC8C /* Inner */ = {
 			isa = PBXGroup;
 			children = (
-				0806F5052B348ADB009E57AB /* SearchView.swift */,
 				08137B9C2B46FB5D00BDAC8C /* HomeView+Weather.swift */,
 				089807C02B4941D900316101 /* HomeView+DirectionToBusStop.swift */,
 				08E17AF62B5BF650004C4E6A /* HomeView+SearchField.swift */,
@@ -487,18 +482,9 @@
 		08D949682B4D6AD8000CCF0C /* DirectionsRoute */ = {
 			isa = PBXGroup;
 			children = (
-				08D9496D2B4DAA9B000CCF0C /* Inner */,
 				08D949692B4D6AE8000CCF0C /* DirectionsRouteView.swift */,
 			);
 			path = DirectionsRoute;
-			sourceTree = "<group>";
-		};
-		08D9496D2B4DAA9B000CCF0C /* Inner */ = {
-			isa = PBXGroup;
-			children = (
-				0859B4BE2B5976E60059E99A /* DirectionsRouteView+ListPlace.swift */,
-			);
-			path = Inner;
 			sourceTree = "<group>";
 		};
 		5ED12B8F7907002CD908140D /* Pods */ = {
@@ -696,12 +682,10 @@
 				08D949622B4D6724000CCF0C /* DirectionsRouteEntity.swift in Sources */,
 				08137B9F2B46FC1000BDAC8C /* WeatherHttp.swift in Sources */,
 				08E17AF92B5BFB2C004C4E6A /* HomeView+SearchButton.swift in Sources */,
-				0806F51D2B348ADB009E57AB /* SearchView.swift in Sources */,
 				08D9495E2B4D6713000CCF0C /* DirectionsRouteHttp.swift in Sources */,
 				082AE3012B39C52200687D4D /* DirectionsViewModel.swift in Sources */,
 				0806F5132B348ADB009E57AB /* BusStopLocationsEntity.swift in Sources */,
 				0806F5222B348ADB009E57AB /* NetworkService.swift in Sources */,
-				0859B4BF2B5976E60059E99A /* DirectionsRouteView+ListPlace.swift in Sources */,
 				0871D8F22B3749D500EC2DFB /* UIScreen.swift in Sources */,
 				0806F5212B348ADB009E57AB /* NetworkError.swift in Sources */,
 				0806F4D72B348AC0009E57AB /* BusReminderApp.swift in Sources */,
