@@ -7,37 +7,67 @@
 
 import SwiftUI
 
-extension HomeView {
-    func makeSearchField() -> some View {
-        HStack {
-            Button {
-                searchText = ""
-            } label: {
-                Image(systemName: "x.circle")
-            }
-            TextField(
-                "",
-                text: $searchText,
-                prompt: Text("Nhập vị trí cần đến").foregroundColor(.white)
-            )
-            Button {
-                if searchText != "" {
-                    searchPlacesViewModel.searchPlace(
-                        parameter: SearchPlaceParameters(textQuery: searchText)
-                    )
+struct SearchLocationView: View {
+    @StateObject var searchPlacesViewModel = SearchPlaceViewModel()
+    
+    @State var searchText = "Hyatt Regency San Francisco"
+    let action: (_ destination: SearchPlace.Place.Location) -> Void
+    @FocusState var focusedField: Bool
+    var body: some View {
+        VStack {
+            HStack {
+                Button {
+                    if searchText != "" {
+                        searchPlacesViewModel.searchPlace(
+                            parameter: SearchPlaceParameters(textQuery: searchText)
+                        )
+                    }
+                } label: {
+                    Image(systemName: "magnifyingglass")
                 }
-            } label: {
-                Image(systemName: "magnifyingglass")
+                TextField(
+                    "Nhập vị trí cần đến",
+                    text: $searchText,
+                    onCommit: {
+                        if searchText != "" {
+                            searchPlacesViewModel.searchPlace(
+                                parameter: SearchPlaceParameters(textQuery: searchText)
+                            )
+                        }
+                    }
+                )
+                .focused($focusedField)
+                Button {
+                    searchText = ""
+                } label: {
+                    Image(systemName: "x.circle")
+                }
+            }
+            .font(.title3)
+            .padding(12)
+            .foregroundColor(.white)
+            .background {
+                RoundedCornersShape(corners: .allCorners, radius: 12)
+                    .fill(Color.deepBlue)
+            }
+            .padding(.horizontal)
+            List(searchPlacesViewModel.searchPlace.places) { place in
+                Button {
+                    action(place.location)
+                } label: {
+                    HStack {
+                        Image(systemName: "location.north.circle")
+                            .font(.title3)
+                        Text(place.displayName.text)
+                            .fontStyle(.medium)
+                    }
+                }
+            }
+            .listStyle(.inset)
+            .onAppear{
+                   focusedField = true
             }
         }
-        .font(.title3)
-        .padding(12)
-        .foregroundColor(.white)
-        .background {
-            RoundedCornersShape(corners: .allCorners, radius: 12)
-                .fill(Color.deepBlue)
-        }
-        .padding(.horizontal)
     }
 }
 
