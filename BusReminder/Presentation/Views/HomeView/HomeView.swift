@@ -18,7 +18,7 @@ struct HomeView: View {
     @State var destination = SearchPlace.Place.Location(latitude: 0, longitude: 0)
     @State var isShowMapView = false
     @State var isShowSearchView = false
-    @State var userAddrss = "LuanNT29"
+    @State var userAddrss = ""
     
     var coordinate: CLLocationCoordinate2D {
         if let coordinate = locationManager.userLocation?.coordinate {
