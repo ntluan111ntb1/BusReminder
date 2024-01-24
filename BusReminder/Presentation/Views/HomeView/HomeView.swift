@@ -37,11 +37,11 @@ struct HomeView: View {
             .frame(width: UIScreen.screenWidth)
         }
         .navigationDestination(isPresented: $isShowMapView) {
-                    DirectionsRouteView(destination: destination)
-                        .environmentObject(locationManager)
+            DirectionsRouteView(destination: destination)
+                .environmentObject(locationManager)
         }
         .sheet(isPresented: $isShowSearchView, content: {
-            SearchLocationView() {destination in
+            SearchView() { destination in
                 self.destination = destination
                 isShowSearchView.toggle()
                 isShowMapView.toggle()

@@ -1,18 +1,20 @@
 //
-//  HomeView+SearchField.swift
+//  SearchView.swift
 //  BusReminder
 //
-//  Created by Nguyễn Luân on 20/01/2024.
+//  Created by Nguyễn Luân on 24/01/2024.
 //
+
 
 import SwiftUI
 
-struct SearchLocationView: View {
+struct SearchView: View {
     @StateObject var searchPlacesViewModel = SearchPlaceViewModel()
-    
     @State var searchText = "Hyatt Regency San Francisco"
-    let action: (_ destination: SearchPlace.Place.Location) -> Void
     @FocusState var focusedField: Bool
+    
+    let action: (_ destination: SearchPlace.Place.Location) -> Void
+    
     var body: some View {
         VStack {
             HStack {
@@ -65,7 +67,7 @@ struct SearchLocationView: View {
             }
             .listStyle(.inset)
             .onAppear{
-                   focusedField = true
+                focusedField = true
             }
         }
     }
