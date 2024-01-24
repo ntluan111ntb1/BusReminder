@@ -6,17 +6,26 @@
 //
 
 import SwiftUI
+import GoogleMaps
 
 struct HomeView: View {
     @EnvironmentObject var locationManager: LocationManager
     // Init ViewModel
     @StateObject var weatherViewModel = WeatherViewModel()
     @StateObject var directionsRouteViewModel = DirectionsRouteViewModel()
+    @StateObject var userLocationViewModel = UserLocationViewModel()
     
     @State var destination = SearchPlace.Place.Location(latitude: 0, longitude: 0)
     @State var isShowMapView = false
     @State var isShowSearchView = false
+    @State var userAddrss = "LuanNT29"
     
+    var coordinate: CLLocationCoordinate2D {
+        if let coordinate = locationManager.userLocation?.coordinate {
+            return coordinate
+        }
+        return CLLocationCoordinate2D(latitude: 37.785834, longitude: -122.406417)
+    }
     var body: some View {
         VStack(spacing: 0) {
             ZStack(alignment: .top) {
@@ -48,9 +57,8 @@ struct HomeView: View {
             }
             .padding(.top)
         })
+        .onAppear {
+            userLocationViewModel.getAddess(coordinate: coordinate)
+        }
     }
-}
-
-#Preview {
-    HomeView()
 }

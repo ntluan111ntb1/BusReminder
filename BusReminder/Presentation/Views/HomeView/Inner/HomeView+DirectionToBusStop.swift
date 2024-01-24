@@ -17,7 +17,7 @@ extension HomeView{
                     .font(.title3)
             }
             .foregroundColor(.deepBlue)
-            HStack(alignment: .top) {
+            HStack(alignment: .top, spacing: 20) {
                 VStack(spacing: 0) {
                     Image("map")
                         .resizable()
@@ -35,11 +35,23 @@ extension HomeView{
                         .padding(.bottom, 20)
                 }
                 VStack(alignment: .leading) {
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text("From: Your Location")
-                            .fontStyle(.small)
-                        Text("123 Nguyễn Phước Nguyên")
-                            .fontStyle(.mediumBold)
+                    HStack {
+                        VStack(alignment: .leading, spacing: 0) {
+                            Text("From: Your Location")
+                                .fontStyle(.small)
+                            Text(userLocationViewModel.street)
+                                .fontStyle(.mediumBold)
+                            Text(userLocationViewModel.city)
+                                .font(.system(.caption))
+                        }
+                        Spacer()
+                        Button {
+                            userLocationViewModel.getAddess(coordinate: coordinate)
+                        } label: {
+                            Image(systemName: "location.square.fill")
+                                .font(.largeTitle)
+                                .foregroundColor(Color.deepBlue)
+                        }
                     }
                     Divider()
                         .padding(.vertical,5)
@@ -62,36 +74,13 @@ extension HomeView{
                     Spacer()
                 }
                 .foregroundColor(.deepBlue)
-                Button {
-                    isShowMapView = true
-                } label: {
-                    Image("bus-stop-button")
-                        .resizable()
-                        .frame(width: 36, height: 36)
-                        .frame(height: 120)
-                        .background {
-                            RoundedRectangle(cornerRadius: 8)
-                                .fill(LinearGradient(
-                                    gradient: Gradient(colors: [
-                                        Color.deepBlue,
-                                        Color.deepBlue.opacity(0.5)
-                                    ]),
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing)
-                                )
-                        }
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.deepBlue, lineWidth: 1)
-                        }
-                }
             }
             .padding()
             .background {
                 RoundedRectangle(cornerRadius: 12)
                     .fill(Color.lightBlue.opacity(0.5))
             }
-            .frame(width: .infinity, height: 160, alignment: .top)
+            .frame(height: 160, alignment: .top)
         }
     }
 }
