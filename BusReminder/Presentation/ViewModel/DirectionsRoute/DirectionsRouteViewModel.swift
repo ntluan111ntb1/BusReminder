@@ -12,7 +12,7 @@ import Alamofire
 import OSLog
 
 final class DirectionsRouteViewModel: ObservableObject {
-    @Published var directionsRoute: DirectionsRoute?
+    @Published var directionsRoute = DirectionsRoute(routes: [])
     @Published var isLoading = true
 
     private var disposables = Set<AnyCancellable>()
@@ -34,6 +34,7 @@ final class DirectionsRouteViewModel: ObservableObject {
                 guard let self = self else { return }
                 isLoading = false
                 directionsRoute = response
+                print("==> \(directionsRoute.routes)")
             })
             .store(in: &disposables)
     }

@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct SearchView: View {
-    @StateObject var searchPlacesViewModel = SearchPlaceViewModel()
+    @StateObject var searchPlacesViewModel: SearchPlaceViewModel
     @State var searchText = "Hyatt Regency San Francisco"
+//    @State var searchText = "Coopmart Da Nang"
     @FocusState var focusedField: Bool
     
     let action: (_ destination: SearchPlace.Place.Location) -> Void

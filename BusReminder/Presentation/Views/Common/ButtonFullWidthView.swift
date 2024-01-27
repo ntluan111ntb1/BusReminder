@@ -10,6 +10,7 @@ import SwiftUI
 struct ButtonFullWidthView: View {
     let lable: String
     let color: Color
+    let foregroundColor: Color
 
     var action: () -> Void
 
@@ -24,20 +25,12 @@ struct ButtonFullWidthView: View {
         }
         .padding(.vertical, 13)
         .padding(.horizontal, 24)
-        .foregroundColor(.black)
+        .foregroundColor(foregroundColor)
         .background(color)
         .overlay {
             RoundedRectangle(cornerRadius: 64)
                 .stroke(.gray.opacity(0.5), lineWidth: 1)
         }
         .cornerRadius(62)
-    }
-}
-
-struct ButtonView_Previews: PreviewProvider {
-    static var previews: some View {
-        ButtonFullWidthView(lable: "Login", color: .blue) {
-        }
-        .padding()
     }
 }

@@ -19,7 +19,7 @@ struct InfoBusStopView: View {
                     .fontStyle(.mediumLight)
                 Text("Quảng đường: 1km")
                     .fontStyle(.medium)
-                ButtonFullWidthView(lable: "Chọn Chuyến Này", color: .green) {
+                ButtonFullWidthView(lable: "Chọn Chuyến Này", color: .green, foregroundColor: .black) {
                     /// ToDo
                 }
             }

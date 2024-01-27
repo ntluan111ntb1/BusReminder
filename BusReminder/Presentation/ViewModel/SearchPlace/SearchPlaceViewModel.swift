@@ -22,7 +22,6 @@ final class SearchPlaceViewModel: ObservableObject {
                     print(error)
                 }
             } receiveValue: { [self] response in
-                print(response.places)
                 searchPlace = response
             }
             .store(in: &disposables)

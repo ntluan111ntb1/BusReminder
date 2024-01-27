@@ -65,6 +65,8 @@ struct DirectionsRouteEntity: Codable {
         }
 
         let polyline: Step.Polyline
+        let startLocation: Step.Location
+        let endLocation: Step.Location
         let steps: [Step]
         let localizedValues: LocalizedValues
     }

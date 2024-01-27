@@ -19,24 +19,17 @@ extension HomeView{
             .foregroundColor(.deepBlue)
             HStack(alignment: .top, spacing: 20) {
                 VStack(spacing: 0) {
-                    Image("map")
-                        .resizable()
-                        .frame(width: 36, height: 36)
-                        .background(Color.deepOrange)
-                        .clipShape(Circle(), style: /*@START_MENU_TOKEN@*/FillStyle()/*@END_MENU_TOKEN@*/)
+                    Image(systemName: "circle.circle.fill")
+                        .font(.system(.title3))
                     HStack {
                         Divider()
                     }
-                    Image("bus-stop")
-                        .resizable()
-                        .frame(width: 36, height: 36)
-                        .background(Color.deepOrange)
-                        .clipShape(Circle(), style: /*@START_MENU_TOKEN@*/FillStyle()/*@END_MENU_TOKEN@*/)
-                        .padding(.bottom, 20)
+                    Image(systemName: "mappin.circle.fill")
+                        .font(.system(.title3))
                 }
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 8) {
                     HStack {
-                        VStack(alignment: .leading, spacing: 0) {
+                        VStack(alignment: .leading, spacing: 8) {
                             Text("From: Your Location")
                                 .fontStyle(.small)
                             Text(userLocationViewModel.street)
@@ -54,21 +47,21 @@ extension HomeView{
                         }
                     }
                     Divider()
-                        .padding(.vertical,5)
+                        .padding(.vertical, 4)
                     VStack(alignment: .leading, spacing: 0) {
-                        Text("To: Bus Station")
+                        Text("To:")
                             .fontStyle(.small)
-                        Text("123 Nguyễn Phước Nguyên")
+                        Text(searchPlacesViewModel.searchPlace.places.first?.displayName.text ?? "-")
                             .fontStyle(.mediumBold)
                     }
                     HStack {
                         Image(systemName: "clock.arrow.circlepath")
-                        Text("Start: 10:00 Am")
+                        Text("Duration: \(directionsRouteViewModel.directionsRoute.routes.first?.localizedValues.duration.text ?? "-")")
                     }
                     .font(.system(.caption))
                     HStack {
                         Image(systemName: "mappin.and.ellipse")
-                        Text("Distance: 1 Km")
+                        Text("Distance: \(directionsRouteViewModel.directionsRoute.routes.first?.localizedValues.distance.text ?? "-")")
                     }
                     .font(.system(.caption))
                     Spacer()

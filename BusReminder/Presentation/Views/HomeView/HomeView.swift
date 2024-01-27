@@ -14,7 +14,8 @@ struct HomeView: View {
     @StateObject var weatherViewModel = WeatherViewModel()
     @StateObject var directionsRouteViewModel = DirectionsRouteViewModel()
     @StateObject var userLocationViewModel = UserLocationViewModel()
-    
+    @StateObject var searchPlacesViewModel = SearchPlaceViewModel()
+
     @State var destination = SearchPlace.Place.Location(latitude: 0, longitude: 0)
     @State var isShowMapView = false
     @State var isShowSearchView = false
@@ -44,13 +45,17 @@ struct HomeView: View {
             }
             .padding()
             .frame(width: UIScreen.screenWidth)
+            ButtonFullWidthView(lable: "Open Map", color: .deepBlue, foregroundColor: .white) {
+                isShowMapView.toggle()
+            }
+            .padding(.horizontal)
         }
         .navigationDestination(isPresented: $isShowMapView) {
-            DirectionsRouteView(destination: destination)
+            DirectionsRouteView(directionsRouteViewModel: directionsRouteViewModel, destination: destination)
                 .environmentObject(locationManager)
         }
         .sheet(isPresented: $isShowSearchView, content: {
-            SearchView() { destination in
+            SearchView(searchPlacesViewModel: searchPlacesViewModel) { destination in
                 self.destination = destination
                 isShowSearchView.toggle()
                 isShowMapView.toggle()
@@ -59,6 +64,9 @@ struct HomeView: View {
         })
         .onAppear {
             userLocationViewModel.getAddess(coordinate: coordinate)
+        }
+        .onAppear {
+            print("===> \(directionsRouteViewModel.directionsRoute.routes)")
         }
     }
 }

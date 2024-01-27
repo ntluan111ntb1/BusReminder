@@ -14,6 +14,18 @@ struct DirectionsRouteMapper {
                 legs: route.legs.map({ leg in
                     DirectionsRoute.Leg(
                         polyline: DirectionsRoute.Leg.Step.Polyline(encodedPolyline: leg.polyline.encodedPolyline),
+                        startLocation: DirectionsRoute.Leg.Step.Location(
+                            latLng: DirectionsRoute.LatLng(
+                                latitude: leg.startLocation.latLng.latitude,
+                                longitude: leg.startLocation.latLng.longitude
+                            )
+                        ),
+                        endLocation: DirectionsRoute.Leg.Step.Location(
+                            latLng: DirectionsRoute.LatLng(
+                                latitude: leg.endLocation.latLng.latitude,
+                                longitude: leg.endLocation.latLng.longitude
+                            )
+                        ),
                         steps: leg.steps.map({ step in
                             DirectionsRoute.Leg.Step(
                                 distanceMeters: step.distanceMeters,

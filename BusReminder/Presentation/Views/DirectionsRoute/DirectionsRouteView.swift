@@ -10,7 +10,7 @@ import SwiftUI
 struct DirectionsRouteView: View {
     @EnvironmentObject var locationManager: LocationManager
     @Environment(\.dismiss) var dismiss
-    @StateObject var directionsRouteViewModel = DirectionsRouteViewModel()
+    @StateObject var directionsRouteViewModel: DirectionsRouteViewModel
     
     let destination: SearchPlace.Place.Location
     var body: some View {
@@ -18,7 +18,6 @@ struct DirectionsRouteView: View {
             if !directionsRouteViewModel.isLoading {
                 MapView(
                     directionsRoute: directionsRouteViewModel.directionsRoute
-                    ?? DirectionsRoute(routes: [])
                 )
                 .environmentObject(locationManager)
                 .ignoresSafeArea()
