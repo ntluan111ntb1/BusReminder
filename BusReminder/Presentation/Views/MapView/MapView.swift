@@ -12,6 +12,7 @@ struct MapView: UIViewRepresentable {
     typealias UIViewType = GMSMapView
 
     @EnvironmentObject var locationManager: LocationManager
+    @Binding var camera: GMSCameraPosition
     var directionsRoute: DirectionsRoute
     
     /// Mark: Create Map View
@@ -33,6 +34,7 @@ struct MapView: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: GMSMapView, context: Context) {
+        uiView.camera = camera
     }
     
     func makeMapStyle(mapView: GMSMapView) {
@@ -49,11 +51,6 @@ struct MapView: UIViewRepresentable {
     
     func makeUserLocation(mapView: GMSMapView) {
         if let coordinate = locationManager.userLocation?.coordinate {
-            let camera = GMSCameraPosition.camera(
-                withLatitude: coordinate.latitude,
-                longitude: coordinate.longitude,
-                zoom: 15
-            )
             mapView.camera = camera
             mapView.isMyLocationEnabled = true
         }

@@ -21,14 +21,10 @@ struct HomeView: View {
     @State var isShowSearchView = false
     @State var userAddrss = ""
     
-    var coordinate: CLLocationCoordinate2D {
-        if let coordinate = locationManager.userLocation?.coordinate {
-            return coordinate
-        }
-        return CLLocationCoordinate2D(latitude: 37.785834, longitude: -122.406417)
-    }
+    @State var coordinate: CLLocationCoordinate2D
+    
     var body: some View {
-        VStack(spacing: 0) {
+        ScrollView {
             ZStack(alignment: .top) {
                 Image("top-banner")
                     .resizable()
@@ -51,7 +47,11 @@ struct HomeView: View {
             .padding(.horizontal)
         }
         .navigationDestination(isPresented: $isShowMapView) {
-            DirectionsRouteView(directionsRouteViewModel: directionsRouteViewModel, destination: destination)
+            DirectionsRouteView(
+                directionsRouteViewModel: directionsRouteViewModel,
+                coordinate: $coordinate, 
+                destination: destination
+            )
                 .environmentObject(locationManager)
         }
         .sheet(isPresented: $isShowSearchView, content: {
