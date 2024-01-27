@@ -27,7 +27,11 @@ struct DirectionsRouteView: View {
                 .ignoresSafeArea()
                 VStack {
                     Button {
-                        
+                        camera = GMSCameraPosition(
+                            latitude: coordinate.latitude,
+                            longitude: coordinate.longitude,
+                            zoom: 25
+                        )
                     } label: {
                         Image(systemName: "location.circle.fill")
                             .font(.largeTitle)

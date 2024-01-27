@@ -37,12 +37,6 @@ class Coordinator: NSObject {
                         polyline.map = mapView
                     }
                 })
-                mapView.cameraTargetBounds = GMSCoordinateBounds(
-                    coordinate: CLLocationCoordinate2D(latitude: leg.startLocation.latLng.latitude, longitude: leg.startLocation.latLng.longitude),
-                    coordinate: CLLocationCoordinate2D(latitude: leg.endLocation.latLng.latitude, longitude: leg.endLocation.latLng.longitude)
-                )
-                print("max zoom: \(mapView.maxZoom)")
-                print("max zoom: \(mapView.minZoom)")
             }
         }
 
