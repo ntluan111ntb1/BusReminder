@@ -57,6 +57,23 @@ struct HomeView: View {
         .sheet(isPresented: $isShowSearchView, content: {
             SearchView(searchPlacesViewModel: searchPlacesViewModel) { destination in
                 self.destination = destination
+                directionsRouteViewModel.getDirectionsRoute(parameters: DirectionsRouteParameters(
+                    origin: DirectionsRouteParameters.Location(
+                        location: DirectionsRouteParameters.Location.LatLng(
+                            latLng: DirectionsRouteParameters.Location.LatLng.Coordinate(
+                                latitude: coordinate.latitude,
+                                longitude: coordinate.longitude
+                            )
+                        )
+                    ),
+                    destination: DirectionsRouteParameters.Location(
+                        location: DirectionsRouteParameters.Location.LatLng(
+                            latLng: DirectionsRouteParameters.Location.LatLng.Coordinate(
+                                latitude: destination.latitude,
+                                longitude: destination.longitude)
+                        )
+                    )
+                ))
                 isShowSearchView.toggle()
                 isShowMapView.toggle()
             }

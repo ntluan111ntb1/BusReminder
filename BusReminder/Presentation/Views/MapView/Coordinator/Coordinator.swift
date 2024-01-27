@@ -29,17 +29,12 @@ class Coordinator: NSObject {
                 leg.steps.forEach({ step in
                     let part = GMSPath.init(fromEncodedPath: step.polyline.encodedPolyline)
                     let polyline = GMSPolyline.init(path: part)
-                    if step.travelMode == "WALK" {
-                        showWalkPath(polyStr: step.polyline.encodedPolyline, mapView: mapView)
-                    } else {
-                        polyline.strokeColor = UIColor.deepBlue
+                    polyline.strokeColor = step.travelMode == "WALK" ? UIColor.orange : UIColor.deepBlue
                         polyline.strokeWidth = 6
                         polyline.map = mapView
-                    }
                 })
             }
         }
-
     }
 
     func showWalkPath(polyStr: String, mapView: GMSMapView) {

@@ -45,23 +45,6 @@ struct DirectionsRouteView: View {
             }
         }
         .onAppear {
-            directionsRouteViewModel.getDirectionsRoute(parameters: DirectionsRouteParameters(
-                origin: DirectionsRouteParameters.Location(
-                    location: DirectionsRouteParameters.Location.LatLng(
-                        latLng: DirectionsRouteParameters.Location.LatLng.Coordinate(
-                            latitude: coordinate.latitude,
-                            longitude: coordinate.longitude
-                        )
-                    )
-                ),
-                destination: DirectionsRouteParameters.Location(
-                    location: DirectionsRouteParameters.Location.LatLng(
-                        latLng: DirectionsRouteParameters.Location.LatLng.Coordinate(
-                            latitude: destination.latitude,
-                            longitude: destination.longitude)
-                    )
-                )
-            ))
             camera = GMSCameraPosition.camera(
                 withLatitude: coordinate.latitude,
                 longitude: coordinate.longitude,

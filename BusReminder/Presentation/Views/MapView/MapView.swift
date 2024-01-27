@@ -50,9 +50,7 @@ struct MapView: UIViewRepresentable {
     }
     
     func makeUserLocation(mapView: GMSMapView) {
-        if let coordinate = locationManager.userLocation?.coordinate {
-            mapView.camera = camera
-            mapView.isMyLocationEnabled = true
-        }
+        mapView.camera = camera
+        mapView.isMyLocationEnabled = true
     }
 }

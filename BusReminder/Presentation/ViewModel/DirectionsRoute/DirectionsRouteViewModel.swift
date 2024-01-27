@@ -19,6 +19,7 @@ final class DirectionsRouteViewModel: ObservableObject {
     private let logger = Logger()
 
     func getDirectionsRoute(parameters: DirectionsRouteParameters) {
+        isLoading = true
         DirectionsRouteHttp.getDirectionsRoute(parameters: parameters)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] completion in
